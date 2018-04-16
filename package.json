@@ -1,0 +1,29 @@
+{
+  "name": "pp-mp-examples",
+  "version": "0.0.1",
+  "description": "PayPal Marketplaces API Example Apps",
+  "main": "install.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppnsanders/pp-mp-examples.git"
+  },
+  "keywords": [
+    "PayPal",
+    "Marketplaces",
+    "Nodejs",
+    "Krakenjs"
+  ],
+  "author": "Nate Sanders",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ppnsanders/pp-mp-examples/issues"
+  },
+  "homepage": "https://github.com/ppnsanders/pp-mp-examples#readme",
+  "dependencies": {
+    "child-process-promise": "^2.2.1",
+    "prompt": "^1.0.0"
+  }
+}
