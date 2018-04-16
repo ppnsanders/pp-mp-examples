@@ -8,7 +8,7 @@ const apps = [
 	}
 ]
 
-callback(err, result) => {
+function callback(err, result) {
 	if(err) {
 		console.log('-- AN ERROR OCCURRED --')
 		console.log(err)
