@@ -1,4 +1,4 @@
-const exec = require('child-process-promise').exec
+const exec = require('child-process-promise').exec;
 
 const apps = [
 	{
@@ -6,20 +6,20 @@ const apps = [
 		npm: true,
 		bower: true
 	}
-]
+];
 
 function callback(err, result) {
 	if(err) {
-		console.log('-- AN ERROR OCCURRED --')
-		console.log(err)
+		console.log('-- AN ERROR OCCURRED --');
+		console.log(err);
 	} else {
 		if(result.npm === true) {
-			console.log(result.name + ' NPM packages installed successfully!')
+			console.log(result.name + ' NPM packages installed successfully!');
 		} else {
 			//no output
 		}
 		if(result.bower === true) {
-			console.log(result.name + ' BOWER packages installed successfully!')
+			console.log(result.name + ' BOWER packages installed successfully!');
 		} else {
 			//no output
 		}
@@ -27,9 +27,9 @@ function callback(err, result) {
 }
 
 exec('npm install')
-	.then((result) => {
-		console.log('pp-mp-examples NPM packages installed successfully')
-		apps.forEach((application) => {
+	.then(function(result) {
+		console.log('pp-mp-examples NPM packages installed successfully');
+		apps.forEach(funcition (application) {
 			let command = 'cd ' + application.name + '; '
 			if(application.npm === true) {
 				command += 'npm install; '
@@ -38,15 +38,15 @@ exec('npm install')
 				command += 'bower install;'
 			}
 			exec(command)
-				.then((result) => {
+				.then(function (result) {
 					callback(null, application)
 				})
-				.catch((err) => {
+				.catch(function (err) {
 					callback(err)
 				})
 		})
 	})
-	.catch((err) => {
+	.catch(function (err) {
 		console.log('ERROR while installing packages for pp-mp-examples')
 		console.log(err)
-	})
+	});
