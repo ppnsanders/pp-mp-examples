@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/ppnsanders/pp-mp-examples#readme",
   "dependencies": {
+    "bower": "^1.8.4",
     "child-process-promise": "^2.2.1",
     "prompt": "^1.0.0"
   }
