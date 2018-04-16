@@ -12,4 +12,4 @@ module.exports = (router) => {
         res.render('index', { component: req.params.page })
     })
 
-};
+}
