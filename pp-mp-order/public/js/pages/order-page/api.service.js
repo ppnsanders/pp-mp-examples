@@ -83,6 +83,25 @@ angular.module('ppMpOrder').service('orderServiceModel', function ($http, $cooki
 	    model.order.purchase_units[0].invoice_number = 'INV-' + faker.random.uuid()
 	    //payment_descriptor
 	    model.order.purchase_units[0].payment_descriptor = 'Payment Nate Shop'
+	    //application_context
+	    model.order.application_context = {}
+	    model.order.application_context.brand_name = model.merchant.brandName
+	    model.order.application_context.locale = 'en_US'
+	    model.order.application_context.landing_page = 'Billing'
+	    model.order.application_context.shipping_preference = 'NO_SHIPPING'
+	    model.order.application_context.user_action = 'continue'
+	    //metadata
+	    model.order.metadata = {}
+	    //metadata.postback_data
+	    model.order.metadata.postback_data = []
+	    model.order.metadata.postback_data[0] = {}
+	    model.order.metadata.postback_data[0].name = 'metaOneName'
+	    model.order.metadata.postback_data[0].value = 'metaOneValue'
+	    //metadata.supplementary_data
+	    model.order.metadata.supplementary_data = []
+	    model.order.metadata.supplementary_data[0] = {}
+	    model.order.metadata.supplementary_data[0].name = 'supplementaryOneName'
+	    model.order.metadata.supplementary_data[0].value = 'supplementaryOneValue'
 	    //redirect URLs
 	    model.order.redirect_urls = {}
 	    model.order.redirect_urls.return_url = 'http://localhost:8000/return'
