@@ -4,7 +4,7 @@
 
 ## Setup & Install
 
-1. Fork or Clone this Repo.
+1. Clone this Repo `$ git clone https://github.com/ppnsanders/pp-mp-examples.git`
 2. Run `$ cd pp-mp-examples`
 3. Run `$ npm install`
 4. Run `$ node install.js`
