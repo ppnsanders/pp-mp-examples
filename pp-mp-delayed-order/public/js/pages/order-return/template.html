@@ -1,0 +1,99 @@
+<div id="orderView">
+    <div class="ui grid">
+        <div id="iamslow" class="sixteen wide column" style="display: none;">
+            <div class="ui warning message">
+                <div class="header">
+                    <div class="ui active inline loader"></div> This might take a while..
+                </div>
+                Generally, this will take about 30 seconds to a minute and is handled by having a webhook, but we're testing locally....
+            </div>
+        </div>
+        <div class="two column row">
+            <div class="column" id="onAuthorizeData" style="display: none;">
+            	<center><h3>onAuthorize(data)</h3></center>
+            	<button id="payOrderRequestButton" class="fluid ui primary button" ng-click="model.setPayOrderRequest()">Continue to Pay Order</button>
+            	<pre>
+            		[[model.action.onAuthorize | json]]
+            	</pre>
+            </div>
+            <div class="column" id="onCancelData" style="display: none;">
+            	<center><h3>onCancel(data)</h3></center>
+            	<button id="cancelOrderButton" class="fluid ui primary button" ng-click="model.cancelOrder()">Cancel Order</button>
+            	<pre>
+            		[[model.action.onCancel | json]]
+            	</pre>
+            </div>
+            <div class="column" id="onErrorData" style="display: none;">
+            	<center><h3>onError(data)</h3></center>
+            	<pre>
+            		[[model.action.onError | json]]
+            	</pre>
+            </div>
+            <div class="column" id="payOrderRequestFields" style="display: none;">
+            	<center><h3>Pay Order Fields</h3></center>
+                <div class="ui form">
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>disbursement_mode:</label>
+                            <input type="text" ng-model="model.payOrderRequest.disbursement_mode">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column" id="payOrderRequestObject" style="display: none;">
+            	<center><h3>Pay Order Request</h3></center>
+            	<button id="payOrderButton" class="fluid ui primary button" ng-click="model.payOrder()">Pay Order</button>
+            	<pre>
+            		[[model.payOrderRequest | json]]
+            	</pre>
+            </div>
+            <div class="column" id="payResponseObject" style="display: none;">
+            	<center><h3>Pay Order Response</h3></center>
+                <button id="createDisbursementButton" class="fluid ui primary button" ng-click="model.setDisbursementRequest()">Continue to Disbursement</button>
+            	<div id="payOrderResponseJson" style="display: none;">
+            		<pre>
+            			[[model.payOrderResponse | json]]
+            		</pre>
+            	</div>
+            	<div id="payOrderResponseLoading" style="display: none;">
+            		<segment-loader></segment-loader>
+            	</div>
+            </div>
+            <div class="column" id="disbursementFields" style="display: none;">
+                <center><h3>Disbursement Fields</h3></center>
+                <div class="ui form">
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>reference_type:</label>
+                            <input type="text" ng-model="model.disbursementRequest.reference_type">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>reference_id:</label>
+                            <input type="text" ng-model="model.disbursementRequest.reference_id">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column" id="disbursementRequestObject" style="display: none;">
+                <center><h3>Disbursement Request Object</h3></center>
+                <button id="disburseButton" class="fluid ui primary button" ng-click="model.disburse()">Disburse Funds</button>
+                <pre>
+                    [[model.disbursementRequest | json]]
+                </pre>
+            </div>
+            <div class="column" id="disbursementResponseObject" style="display: none;">
+                <center><h3>Disbursement Response Object</h3></center>
+                <div id="disbursementResponseJson" style="display: none;">
+                    <pre>
+                        [[model.disbursementResponse | json]]
+                    </pre>
+                </div>
+                <div id="disbursementResponseLoading" style="display: none;">
+                    <segment-loader></segment-loader>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    

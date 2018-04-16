@@ -1,0 +1,289 @@
+<div id="orderView">
+    <div class="ui grid">
+        <div class="two column row">
+            <div class="column" id="orderFields">
+                <center><h3>Order Fields</h3></center>
+                <div class="ui form">
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>reference_id:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].reference_id">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>description:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].description">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>items[0].name:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].items[0].name">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>items[0].sku:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].items[0].sku">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>items[0].price:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].items[0].price" ng-change="model.updateAmountObject()">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>items[0].currency:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].items[0].currency">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>items[0].quantity:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].items[0].quantity" ng-change="model.updateAmountObject()">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>items[0].category:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].items[0].category">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>items[1].name:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].items[1].name">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>items[1].sku:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].items[1].sku">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>items[1].price:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].items[1].price" ng-change="model.updateAmountObject()">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>items[1].currency:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].items[1].currency">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>items[1].quantity:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].items[1].quantity" ng-change="model.updateAmountObject()">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>items[1].category:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].items[1].category">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>amount.currency:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].amount.currency">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>amount.details.subtotal:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].amount.details.subtotal">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>amount.details.shipping:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].amount.details.shipping" ng-change="model.updateAmountObject()">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>amount.details.tax:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].amount.details.tax" ng-change="model.updateAmountObject()">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>amount.total:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].amount.total">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>payee.merchant_id:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].payee.merchant_id">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>payee.email:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].payee.email">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>payee.payee_display_metadata.brand_name:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].payee.payee_display_metadata.brand_name">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>payee.payee_display_metadata.phone.country_code:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].payee.payee_display_metadata.phone.country_code">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>payee.payee_display_metadata.phone.number:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].payee.payee_display_metadata.phone.number">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>shipping_address.recipient_name:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].shipping_address.recipient_name">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>shipping_address.line1:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].shipping_address.line1">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>shipping_address.line2:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].shipping_address.line2">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>shipping_address.city:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].shipping_address.city">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>shipping_address.postal_code:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].shipping_address.postal_code">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>shipping_address.state:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].shipping_address.state">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>shipping_address.phone:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].shipping_address.phone">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>shipping_method:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].shipping_method">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>partner_fee_details.amount.currency:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].partner_fee_details.amount.currency">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>partner_fee_details.amount.value:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].partner_fee_details.amount.value">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>partner_fee_details.receiver.email:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].partner_fee_details.receiver.email">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>partner_fee_details.receiver.merchant_id:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].partner_fee_details.receiver.merchant_id">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>partner_fee_details.receiver.payee_display_metadata.display_phone.country_code:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].partner_fee_details.receiver.payee_display_metadata.display_phone.country_code">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>partner_fee_details.receiver.payee_display_metadata.display_phone.number:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].partner_fee_details.receiver.payee_display_metadata.display_phone.number">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>partner_fee_details.receiver.payee_display_metadata.brand_name:</label>
+                            <input type="text" ng-model="model.order.purchase_units[0].partner_fee_details.receiver.payee_display_metadata.brand_name">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>redirect_urls.return_url:</label>
+                            <input type="text" ng-model="model.order.redirect_urls.return_url">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>redirect_urls.cancel_url:</label>
+                            <input type="text" ng-model="model.order.redirect_urls.cancel_url">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="orderRequestObject" class="column">
+                <center><h3>Order Request Object</h3></center>
+                <button id="createOrderButton" class="fluid ui primary button" ng-click="model.createOrder()">Create Order</button>
+                <pre>
+                    [[model.order | json]]
+                </pre>
+            </div>
+            <div id="orderResponseObject" class="column" style="display: none;">
+                <center><h3>Order Response Object</h3></center>
+                <button id="showPayPalButton" style="display: none;" class="fluid ui primary button" ng-click="model.showPayPalButton()">Show PayPal Button</button>
+                <div id="orderResponseJson" style="display: none;">
+                    <pre>
+                        [[model.orderResponse | json]]
+                    </pre>
+                </div>
+                <div id="orderResponseLoading" style="display: none;">
+                    <segment-loader></segment-loader>
+                </div>
+            </div>
+            <div id="orderPayPalButton" class="column" style="display: none;">
+                <center><h3>PayPal Button</h3></center>
+                <div style="margin-top: 60px;"> <center>
+                    <pp-button orderid="[[model.orderResponse.id]]"></pp-button>
+                </center></div>
+            </div>
+            <div id="orderResponseObject" class="column" style="display: none;">
+                <center><h3>Order Response Object</h3></center>
+                <button id="showPayPalButton" class="fluid ui primary button" ng-click="model.showPayPalButton()">Show PayPal Button</button>
+                <pre>
+                    [[model.orderResponse | json]]
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>

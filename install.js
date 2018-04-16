@@ -5,6 +5,11 @@ const apps = [
 				name: 'pp-mp-order',
 				npm: true,
 				bower: true
+			},
+			{
+				name: 'pp-mp-delayed-order',
+				npm: true,
+				bower: true
 			}
 		]
 
