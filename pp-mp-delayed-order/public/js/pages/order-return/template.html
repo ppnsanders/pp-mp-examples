@@ -49,7 +49,7 @@
             </div>
             <div class="column" id="payResponseObject" style="display: none;">
             	<center><h3>Pay Order Response</h3></center>
-                <button id="createDisbursementButton" class="fluid ui primary button" ng-click="model.setDisbursementRequest()">Continue to Disbursement</button>
+                <button id="createDisbursementButton" style="display: none;" class="fluid ui primary button" ng-click="model.setDisbursementRequest()">Continue to Disbursement</button>
             	<div id="payOrderResponseJson" style="display: none;">
             		<pre>
             			[[model.payOrderResponse | json]]

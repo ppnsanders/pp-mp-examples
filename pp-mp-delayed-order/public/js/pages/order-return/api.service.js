@@ -45,6 +45,7 @@ angular.module('ppMpOrder').service('orderReturnModel', function ($http, $cookie
 			setTimeout(() => {
 				$('#payOrderResponseLoading').hide()
 				$('#payOrderResponseJson').show()
+				$('#createDisbursementButton').show()
 			}, 1000)
 		})
 	}
