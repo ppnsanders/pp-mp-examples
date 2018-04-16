@@ -59,7 +59,6 @@ module.exports = (router) => {
                   body: req.body,
                   json: true
 				}
-				console.log(options)
 				request(options, (err, response, body) => {
 					if(err) {
 						console.log('ERROR in PAY ORDER REQUEST')
