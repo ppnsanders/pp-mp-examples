@@ -20,6 +20,7 @@
     "semantic": "^2.3.1",
     "jquery": "^3.3.1",
     "angular-cookies": "^1.6.9",
-    "faker": "Faker#^4.1.0"
+    "faker": "Faker#^4.1.0",
+    "angular-route": "^1.6.9"
   }
 }
