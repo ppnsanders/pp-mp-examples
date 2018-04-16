@@ -261,13 +261,13 @@
             </div>
             <div id="orderResponseObject" class="column" style="display: none;">
                 <center><h3>Order Response Object</h3></center>
-                <button id="showPayPalButton" class="fluid ui primary button" ng-click="model.showPayPalButton()">Show PayPal Button</button>
-                <div id="orderResponseJson">
+                <button id="showPayPalButton" style="display: none;" class="fluid ui primary button" ng-click="model.showPayPalButton()">Show PayPal Button</button>
+                <div id="orderResponseJson" style="display: none;">
                     <pre>
                         [[model.orderResponse | json]]
                     </pre>
                 </div>
-                <div id="orderResponseLoading">
+                <div id="orderResponseLoading" style="display: none;">
                     <segment-loader></segment-loader>
                 </div>
             </div>

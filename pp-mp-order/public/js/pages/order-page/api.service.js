@@ -126,8 +126,9 @@ angular.module('ppMpOrder').service('orderServiceModel', function ($http, $cooki
 			model.orderResponse = response.data
 			setTimeout(() => {
 				$('#orderResponseLoading').hide()
+				$('#showPayPalButton').show()
 				$('#orderResponseJson').show()
-			}, 1000)
+			}, 500)
 		})
 	}
 
