@@ -21,8 +21,8 @@ angular.module('ppMpOrder').directive('ppButton', [ () => {
 			        shape: 'rect'
 			}
 			$scope.funding = {
-				allowed: [ paypal.FUNDING.CARD, paypal.FUNDING.CREDIT ],
-				disallowed: []
+				allowed: [ paypal.FUNDING.CARD ],
+				disallowed: [ paypal.FUNDING.CREDIT ]
 			}
 			$scope.payment = function () {
 				return $scope.orderid
