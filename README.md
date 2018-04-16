@@ -12,6 +12,8 @@
 
 ## Configuration
 
+When you run `$ node setup.js` you'll be prompted for your `client_id`, `client_secret`, `attributionId`, `email`, `payerId`, `brandName`, and `environment`.  These are your PARTNER details, not your merchant details.  This will allow you to run transactions as the Partner on behalf of a merchant. 
+
 Information you'll need:
 
 ```json
@@ -36,6 +38,24 @@ Information you'll need:
 | `brandName` | This is your Partner "Brand Name", this may be the name of your company or application. |
 | `environment` | This is the environment you wish to test with.  Default value is `sandbox` |
 
+## Marketplaces Onboarding Connected Path _(Coming Soon)_
+
+1. pp-mp-connected-path
+
+*Description:* This onboarding solution allows you to create a PayPal Referral URL and allows your customers to create a PayPal account *OR* link and grant permissions on an existing PayPal account. 
+
+*Merchant Experience Steps:*
+
+1. Fill out forms.
+2. Continue to PayPal.
+3. Create/Login to Account.
+4. Grant Permissions.
+5. Return to Partner Application.
+
+For the first step, this is simplified by the Partner using information they already have which will reduce the number of fields the Merchant (Customer) must provide in order to create/link an account.  //Additional Information coming soon!
+
+[PayPal Documentation](https://developer.paypal.com/docs/marketplaces/connected/)
+
 
 ## Marketplaces Order API
 
@@ -43,6 +63,8 @@ The marketplaces order API is shown here in two modules.
 
 1. pp-mp-order
 2. pp-mp-delayed-order
+
+[PayPal Documentation](https://developer.paypal.com/docs/marketplaces/orders/integration-guide/)
 
 ### pp-mp-order
 
