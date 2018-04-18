@@ -7,11 +7,6 @@ angular.module('ppMpOrder').directive('ppButton', [ () => {
 			orderid: '@'
 		},
 		controller: ['$scope', '$cookies', '$location', ($scope, $cookies, $location) => {
-			$scope.partner = $cookies.getObject('partner-conf')
-			$scope.client = {
-				sandbox: $scope.partner.client_id,
-				production: $scope.partner.client_id,
-			}
 			$scope.env = 'sandbox'
 			$scope.commit = false
 			$scope.style = {
