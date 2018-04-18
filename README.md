@@ -38,7 +38,7 @@ Information you'll need:
 | `brandName` | This is your Partner "Brand Name", this may be the name of your company or application. |
 | `environment` | This is the environment you wish to test with.  Default value is `sandbox` |
 
-## Marketplaces Onboarding Connected Path _(Coming Soon)_
+## Marketplaces Onboarding Connected Path
 
 1. pp-mp-connected-path
 
@@ -52,7 +52,15 @@ Information you'll need:
 4. Grant Permissions.
 5. Return to Partner Application.
 
-For the first step, this is simplified by the Partner using information they already have which will reduce the number of fields the Merchant (Customer) must provide in order to create/link an account.  //Additional Information coming soon!
+For the first step, this is simplified by the Partner using information they already have which will reduce the number of fields the Merchant (Customer) must provide in order to create/link an account.
+
+*Partner/Connected Path Steps:*
+
+1. Collect Information to build the [partner-referrals](https://developer.paypal.com/docs/api/partner-referrals/#partner-referrals_create) request object.
+2. Create the Referral URL.
+3. Redirect the Customer.
+4. Handle the return to your site.
+5. Check the Merchant Account Status [merchant-integrations](https://developer.paypal.com/docs/api/partner-referrals/#merchant-integration).
 
 [PayPal Documentation](https://developer.paypal.com/docs/marketplaces/connected/)
 
