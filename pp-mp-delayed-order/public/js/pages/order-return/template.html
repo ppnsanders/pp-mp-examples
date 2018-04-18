@@ -12,22 +12,28 @@
             <div class="column" id="onAuthorizeData" style="display: none;">
             	<center><h3>onAuthorize(data)</h3></center>
             	<button id="payOrderRequestButton" class="fluid ui primary button" ng-click="model.setPayOrderRequest()">Continue to Pay Order</button>
-            	<pre>
-            		[[model.action.onAuthorize | json]]
-            	</pre>
+                <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+                	<pre>
+                		[[model.action.onAuthorize | json]]
+                	</pre>
+                </div>
             </div>
             <div class="column" id="onCancelData" style="display: none;">
             	<center><h3>onCancel(data)</h3></center>
             	<button id="cancelOrderButton" class="fluid ui primary button" ng-click="model.cancelOrder()">Cancel Order</button>
-            	<pre>
-            		[[model.action.onCancel | json]]
-            	</pre>
+                <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+                	<pre>
+                		[[model.action.onCancel | json]]
+                	</pre>
+                </div>
             </div>
             <div class="column" id="onErrorData" style="display: none;">
             	<center><h3>onError(data)</h3></center>
-            	<pre>
-            		[[model.action.onError | json]]
-            	</pre>
+                <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+                	<pre>
+                		[[model.action.onError | json]]
+                	</pre>
+                </div>
             </div>
             <div class="column" id="payOrderRequestFields" style="display: none;">
             	<center><h3>Pay Order Fields</h3></center>
@@ -43,17 +49,21 @@
             <div class="column" id="payOrderRequestObject" style="display: none;">
             	<center><h3>Pay Order Request</h3></center>
             	<button id="payOrderButton" class="fluid ui primary button" ng-click="model.payOrder()">Pay Order</button>
-            	<pre>
-            		[[model.payOrderRequest | json]]
-            	</pre>
+                <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+                	<pre>
+                		[[model.payOrderRequest | json]]
+                	</pre>
+                </div>
             </div>
             <div class="column" id="payResponseObject" style="display: none;">
             	<center><h3>Pay Order Response</h3></center>
                 <button id="createDisbursementButton" style="display: none;" class="fluid ui primary button" ng-click="model.setDisbursementRequest()">Continue to Disbursement</button>
             	<div id="payOrderResponseJson" style="display: none;">
-            		<pre>
-            			[[model.payOrderResponse | json]]
-            		</pre>
+                    <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+                		<pre>
+                			[[model.payOrderResponse | json]]
+                		</pre>
+                    </div>
             	</div>
             	<div id="payOrderResponseLoading" style="display: none;">
             		<segment-loader></segment-loader>
@@ -79,16 +89,20 @@
             <div class="column" id="disbursementRequestObject" style="display: none;">
                 <center><h3>Disbursement Request Object</h3></center>
                 <button id="disburseButton" class="fluid ui primary button" ng-click="model.disburse()">Disburse Funds</button>
-                <pre>
-                    [[model.disbursementRequest | json]]
-                </pre>
+                <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+                    <pre>
+                        [[model.disbursementRequest | json]]
+                    </pre>
+                </div>
             </div>
             <div class="column" id="disbursementResponseObject" style="display: none;">
                 <center><h3>Disbursement Response Object</h3></center>
                 <div id="disbursementResponseJson" style="display: none;">
-                    <pre>
-                        [[model.disbursementResponse | json]]
-                    </pre>
+                    <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+                        <pre>
+                            [[model.disbursementResponse | json]]
+                        </pre>
+                    </div>
                 </div>
                 <div id="disbursementResponseLoading" style="display: none;">
                     <segment-loader></segment-loader>
