@@ -38,7 +38,7 @@ Information you'll need:
 | `brandName` | This is your Partner "Brand Name", this may be the name of your company or application. |
 | `environment` | This is the environment you wish to test with.  Default value is `sandbox` |
 
-## Marketplaces Onboarding Connected Path
+## Marketplaces Onboarding - Connected Path
 
 1. [pp-mp-connected-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-connected-path)
 
@@ -64,6 +64,11 @@ For the first step, this is simplified by the Partner using information they alr
 
 [PayPal Documentation](https://developer.paypal.com/docs/marketplaces/connected/)
 
+## Marketplaces Onboarding - Managed Path
+
+1. [pp-mp-managed-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-managed-path)
+
+[PayPal Documentation](https://developer.paypal.com/docs/marketplaces/managed/)
 
 ## Marketplaces Order API
 

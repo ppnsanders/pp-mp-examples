@@ -1,0 +1,500 @@
+<div id="managedView">
+    <div class="ui grid">
+        <div class="two column row">
+            <div class="column" id="managedFields">
+                <center><h3>Managed Fields</h3></center>
+                <div class="ui segment">
+	                <div class="ui form">
+	                	<h4 class="ui dividing header">owner_info</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.email:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.email">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">owner_info.name</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.prefix:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.name.prefix">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.given_name:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.name.given_name">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.surname:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.name.surname">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.middle_name:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.name.middle_name">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.suffix:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.name.suffix">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">owner_info</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.country_code_of_nationality:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.country_code_of_nationality">
+	                        </div>
+	                    </div>
+	                   <h4 class="ui dividing header">owner_info.addresses[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.line1:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.addresses[0].line1">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.line2:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.addresses[0].line2">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.city:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.addresses[0].city">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.state:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.addresses[0].state">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.country_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.addresses[0].country_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.postal_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.addresses[0].postal_code">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">owner_info</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.date_of_birth:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.date_of_birth">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.ssn:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.ssn">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">owner_info.phones[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.phones[0].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.country_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.phones[0].country_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.national_number:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.phones[0].national_number">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.extension_number:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.phones[0].extension_number">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">owner_info.phones[1]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.phones[1].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.country_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.phones[1].country_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.national_number:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.phones[1].national_number">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.extension_number:</label>
+	                            <input type="text" ng-model="model.managedRequest.owner_info.phones[1].extension_number">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">business_info</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.employer_identification_number:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.employer_identification_number">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">business_info.names[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.names[0].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.name:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.names[0].name">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">business_info.names[1]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.names[1].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.name:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.names[1].name">
+	                        </div>
+	                    </div>
+        				<h4 class="ui dividing header">business_info.addresses[0]</h4>
+        				<div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.addresses[0].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.line1:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.addresses[0].line1">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.line2:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.addresses[0].line2">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.city:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.addresses[0].city">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.state:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.addresses[0].state">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.country_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.addresses[0].country_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.postal_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.addresses[0].postal_code">
+	                        </div>
+	                    </div>
+        				<h4 class="ui dividing header">business_info.phones[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.phones[0].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.country_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.phones[0].country_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.national_number:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.phones[0].national_number">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.extension_number:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.phones[0].extension_number">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">business_info.phones[1]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.phones[1].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.country_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.phones[1].country_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.national_number:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.phones[1].national_number">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.extension_number:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.phones[1].extension_number">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">business_info</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.category:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.category">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.sub_category:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.sub_category">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.merchant_category_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.merchant_category_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.date_business_established:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.date_business_established">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.date_of_registration:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.date_of_registration">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.dispute_email:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.dispute_email">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">business_info.customer_service</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.email:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.customer_service.email">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.phone.country_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.customer_service.phone.country_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.phone.national_number:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.customer_service.phone.national_number">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.phone.extension_number:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.customer_service.phone.extension_number">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.issuer_country_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.customer_data.business_details.identity_documents[0].issuer_country_code">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">business_info.business_sales_details.average_price</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.minimum_amount.currency_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.business_sales_details.average_price.minimum_amount.currency_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.minimum_amount.value:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.business_sales_details.average_price.minimum_amount.value">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.maximum_amount.currency_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.business_sales_details.average_price.maximum_amount.currency_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.maximum_amount.value:</label>
+	                            <input type="text" ng-model="model.managedRequest.customer_data.business_details.annual_sales_volumen_range.maximum_amount.value">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">business_info.business_sales_details.average_monthly_volume</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.minimum_amount.currency_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.business_sales_details.average_monthly_volume.minimum_amount.currency_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.minimum_amount.value:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.business_sales_details.average_monthly_volume.minimum_amount.value">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.maximum_amount.currency_code:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.business_sales_details.average_monthly_volume.maximum_amount.currency_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.maximum_amount.value:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.business_sales_details.average_monthly_volume.maximum_amount.value">
+	                        </div>
+	                    </div>
+        				<h4 class="ui dividing header">business_info.business_sales_details</h4>
+        				<div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.website:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.business_sales_details.website">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.revenue_from_online_sales.minimum_percent:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.business_sales_details.revenue_from_online_sales.minimum_percent">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.revenue_from_online_sales.maximum_percent:</label>
+	                            <input type="text" ng-model="model.managedRequest.business_info.business_sales_details.revenue_from_online_sales.maximum_percent">
+	                        </div>
+	                    </div>
+        				<h4 class="ui dividing header">account_currency</h4>
+        				<div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.account_currency:</label>
+	                            <input type="text" ng-model="model.managedRequest.account_currency">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">account_relations[0]</h4>
+        				<div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.managedRequest.account_relations[0].type">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">account_permissions[0].permissions</h4>
+        				<div ng-repeat="perm in model.managedRequest.account_permissions[0].permissions">
+        					<div class="inline fields">
+		                        <div class="sixteen wide field">
+		                            <label>[[$index]]</label>
+		                            <input type="text" ng-model="model.managedRequest.account_permissions[0].permissions[$index]">
+		                        </div>
+	                    	</div>
+	                    </div>
+	                    <h4 class="ui dividing header">timezone</h4>
+        				<div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.timezone:</label>
+	                            <input type="text" ng-model="model.managedRequest.timezone">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">partner_merchant_external_id</h4>
+        				<div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.partner_merchant_external_id:</label>
+	                            <input type="text" ng-model="model.managedRequest.partner_merchant_external_id">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">partner_tax_reporting</h4>
+        				<div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.partner_tax_reporting:</label>
+	                            <input type="text" ng-model="model.managedRequest.partner_tax_reporting">
+	                        </div>
+	                    </div>
+	                </div>
+            	</div>
+            </div>
+            <div id="managedRequestObject" class="column">
+                <center><h3>Managed Request Object</h3></center>
+                <button id="createAccountButton" class="fluid ui primary button" ng-click="model.createAccount()">Create Account</button>
+                <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+                	<pre>
+                    	[[model.managedRequest | json]]
+                    </pre>
+                </div>
+            </div>
+            <div id="managedResponse" class="column" style="display: none;">
+                <center><h3>Managed Response Object</h3></center>
+                <div id="managedResponseJson" style="display: none; margin-top: 20px;">
+                	<div class="ui segment" style="overflow: scroll;">
+	                    <pre>
+	                        [[model.managedResponse | json]]
+	                    </pre>
+                	</div>
+                </div>
+                <div id="managedResponseLoading" style="display: none;">
+                    <segment-loader></segment-loader>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+        
+        
+        

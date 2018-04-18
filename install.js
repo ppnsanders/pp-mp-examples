@@ -15,6 +15,11 @@ const apps = [
 				name: 'pp-mp-connected-path',
 				npm: true,
 				bower: true
+			},
+			{
+				name: 'pp-mp-managed-path',
+				npm: true,
+				bower: true
 			}
 		]
 
