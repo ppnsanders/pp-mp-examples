@@ -5,18 +5,22 @@
             	<div class="ui segment">
 	            	<center><h3>Query Params</h3></center>
 	            	<button id="getMerchantAccountStatusButton" class="fluid ui primary button" ng-click="model.getMerchantAccountStatus()">Get Merchant Account Status</button>
-	            	<pre>
-						[[model.params | json]]
-					</pre>
+	            	<div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+		            	<pre>
+							[[model.params | json]]
+						</pre>
+					</div>
 				</div>
             </div>
             <div class="column" id="merchantStatusResponseObject" style="display: none;">
             	<div class="ui segment">
 	            	<center><h3>Merchant Status Response</h3></center>
 	            	<div id="merchantStatusResponseJson" style="display: none;">
-	            		<pre>
-	            			[[model.merchantStatusResponse | json]]
-	            		</pre>
+	            		<div class="ui segment" style="overflow: scroll;">
+		            		<pre>
+		            			[[model.merchantStatusResponse | json]]
+		            		</pre>
+		            	</div>
 	            	</div>
 	            	<div id="merchantStatusResponseLoading" style="display: none;">
 	            		<segment-loader></segment-loader>

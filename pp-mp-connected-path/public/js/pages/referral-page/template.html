@@ -406,7 +406,7 @@
             <div id="referralRequestObject" class="column">
                 <center><h3>Referral Request Object</h3></center>
                 <button id="createReferralButton" class="fluid ui primary button" ng-click="model.createReferral()">Create Referral</button>
-                <div class="ui segment" style="overflow: none;">
+                <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
                 	<pre>
                     	[[model.referralRequest | json]]
                     </pre>
@@ -415,8 +415,8 @@
             <div id="referralResponse" class="column" style="display: none;">
                 <center><h3>Referral Response Object</h3></center>
                 <a id="createPayPalAccountButton" style="display: none;" href="[[model.referralResponse.links[1].href]]" class="fluid ui primary button">Create PayPal Account</a>
-                <div id="referralResponseJson" style="display: none;">
-                	<div class="ui segment">
+                <div id="referralResponseJson" style="display: none; margin-top: 20px;">
+                	<div class="ui segment" style="overflow: scroll;">
 	                    <pre>
 	                        [[model.referralResponse | json]]
 	                    </pre>
