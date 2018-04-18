@@ -10,6 +10,11 @@ const apps = [
 				name: 'pp-mp-delayed-order',
 				npm: true,
 				bower: true
+			},
+			{
+				name: 'pp-mp-connected-path',
+				npm: true,
+				bower: true
 			}
 		]
 

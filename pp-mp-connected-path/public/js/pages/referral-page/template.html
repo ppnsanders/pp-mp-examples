@@ -1,0 +1,431 @@
+<h1>Referral-Page</h1>
+
+<!--
+<pre>
+	[[model.referralRequest | json]]
+</pre>
+<button ng-click="model.createReferral()">Create Referral</button>
+<pre>
+	[[model.referralResponse | json]]
+</pre>
+
+<a href="[[model.referralResponse.links[1].href]]" target="_blank">Referral Link</a> -->
+
+
+<div id="referralView">
+    <div class="ui grid">
+        <div class="two column row">
+            <div class="column" id="referralFields">
+                <center><h3>Referral Fields</h3></center>
+                <div class="ui segment">
+	                <div class="ui form">
+	                	<h4 class="ui dividing header">requested_capabilities[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.capability:</label>
+	                            <input type="text" ng-model="model.referralRequest.requested_capabilities[0].capability">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">requested_capabilities[0].api_integration_preference</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.partner_id:</label>
+	                            <input type="text" ng-model="model.referralRequest.requested_capabilities[0].api_integration_preference.partner_id">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">requested_capabilities[0].api_integration_preference.rest_api_integration</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.integration_method:</label>
+	                            <input type="text" ng-model="model.referralRequest.requested_capabilities[0].api_integration_preference.rest_api_integration.integration_method">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.integration_type:</label>
+	                            <input type="text" ng-model="model.referralRequest.requested_capabilities[0].api_integration_preference.rest_api_integration.integration_type">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">requested_capabilities[0].rest_third_party_details</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.partner_client_id:</label>
+	                            <input type="text" ng-model="model.referralRequest.requested_capabilities[0].rest_third_party_details.partner_client_id">
+	                        </div>
+	                    </div>
+	                    <div ng-repeat="feature in model.referralRequest.requested_capabilities[0].rest_third_party_details.feature_list" class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.feature_list[ [[$index]] ]</label>
+	                            <input type="text" ng-model="model.referralRequest.requested_capabilities[0].rest_third_party_details.feature_list[$index]">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">web_experience_preference</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.partner_logo_url:</label>
+	                            <input type="text" ng-model="model.referralRequest.web_experience_preference.partner_logo_url">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.return_url:</label>
+	                            <input type="text" ng-model="model.referralRequest.web_experience_preference.return_url">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.action_renewal_url:</label>
+	                            <input type="text" ng-model="model.referralRequest.web_experience_preference.action_renewal_url">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">collected_consents[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.referralRequest.collected_consents[0].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.granted:</label>
+	                            <input type="text" ng-model="model.referralRequest.collected_consents[0].granted">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">products</h4>
+	                    <div class="inline fields">
+	                        <div ng-repeat="products in model.referralRequest.products" class="sixteen wide field">
+	                            <label>.products[ [[$index]] ]:</label>
+	                            <input type="text" ng-model="model.referralRequest.products[$index]">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>customer_type:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.customer_type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>preferred_language_code:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.preferred_language_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>primary_currency_code:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.primary_currency_code">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.financial_instrument_data.bank_details[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.nick_name:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.financial_instrument_data.bank_details[0].nick_name">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.account_number:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.financial_instrument_data.bank_details[0].account_number">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.account_type:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.financial_instrument_data.bank_details[0].account_type" ng-change="model.updateAmountObject()">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.currency_code:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.financial_instrument_data.bank_details[0].currency_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.identifiers[0].type:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.financial_instrument_data.bank_details[0].identifiers[0].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.identifiers[0].value:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.financial_instrument_data.bank_details[0].identifiers[0].value">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.partner_specific_identifiers[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.partner_specific_identifiers[0].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.value:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.partner_specific_identifiers[0].value">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.person_details</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.email_address:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.person_details.email_address">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.date_of_birth.event_type:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.person_details.date_of_birth.event_type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.date_of_birth.event_date:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.person_details.date_of_birth.event_date">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.nationality_country_code:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.person_details.nationality_country_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>name.given_name:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.person_details.name.given_name">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>name.surname:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.person_details.name.surname">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.business_details</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.business_type:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.business_type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.category:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.category">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.sub_category:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.sub_category">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.business_description:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.business_description">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.business_details.identity_documents[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.identity_documents[0].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.value:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.identity_documents[0].value">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.partial_value:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.identity_documents[0].partial_value">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.issuer_country_code:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.identity_documents[0].issuer_country_code">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.business_details.names[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.names[0].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.name:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.names[0].name">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.business_details.event_dates[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.event_type:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.event_dates[0].event_type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.event_date:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.event_dates[0].event_date">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.business_details.website_urls[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>website_urls[ [[$index]] ]:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.website_urls[$index]">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.business_details.phone_contacts[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.phone_number_details.country_code:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.phone_contacts[0].phone_number_details.country_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.phone_number_details.national_number:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.phone_contacts[0].phone_number_details.national_number">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>phone_type:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.phone_contacts[0].phone_type">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.business_details.email_contacts[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.email_address:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.email_contacts[0].email_address">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.role:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.email_contacts[0].role">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.business_details.business_address</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.line1:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.business_address.line1">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.city:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.business_address.city">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.country_code:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.business_address.country_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.postal_code:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.business_address.postal_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.state:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.business_address.state">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.business_details.annual_sales_volumen_range</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.minimum_amount.currency:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.annual_sales_volumen_range.minimum_amount.currency">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.minimum_amount.value:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.annual_sales_volumen_range.minimum_amount.value">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.maximum_amount.currency:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.annual_sales_volumen_range.maximum_amount.currency">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.maximum_amount.value:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.annual_sales_volumen_range.maximum_amount.value">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.business_details.average_monthly_volume_range</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.minimum_amount.currency:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.average_monthly_volume_range.minimum_amount.currency">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.minimum_amount.value:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.average_monthly_volume_range.minimum_amount.value">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.maximum_amount.currency:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.average_monthly_volume_range.maximum_amount.currency">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.maximum_amount.value:</label>
+	                            <input type="text" ng-model="model.referralRequest.customer_data.business_details.average_monthly_volume_range.maximum_amount.value">
+	                        </div>
+	                    </div>
+	                </div>
+            	</div>
+            </div>
+            <div id="referralRequestObject" class="column">
+                <center><h3>Referral Request Object</h3></center>
+                <button id="createReferralButton" class="fluid ui primary button" ng-click="model.createReferral()">Create Referral</button>
+                <div class="ui segment" style="overflow: none;">
+                	<pre>
+                    	[[model.referralRequest | json]]
+                    </pre>
+                </div>
+            </div>
+            <div id="referralResponse" class="column" style="display: none;">
+                <center><h3>Referral Response Object</h3></center>
+                <a id="createPayPalAccountButton" style="display: none;" href="[[model.referralResponse.links[1].href]]" class="fluid ui primary button">Create PayPal Account</a>
+                <div id="referralResponseJson" style="display: none;">
+                	<div class="ui segment">
+	                    <pre>
+	                        [[model.referralResponse | json]]
+	                    </pre>
+                	</div>
+                </div>
+                <div id="referralResponseLoading" style="display: none;">
+                    <segment-loader></segment-loader>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

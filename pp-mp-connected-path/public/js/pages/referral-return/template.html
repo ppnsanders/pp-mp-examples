@@ -1,0 +1,28 @@
+<div id="referralView">
+    <div class="ui grid">
+        <div class="two column row">
+            <div class="column" id="returnParams">
+            	<div class="ui segment">
+	            	<center><h3>Query Params</h3></center>
+	            	<button id="getMerchantAccountStatusButton" class="fluid ui primary button" ng-click="model.getMerchantAccountStatus()">Get Merchant Account Status</button>
+	            	<pre>
+						[[model.params | json]]
+					</pre>
+				</div>
+            </div>
+            <div class="column" id="merchantStatusResponseObject" style="display: none;">
+            	<div class="ui segment">
+	            	<center><h3>Merchant Status Response</h3></center>
+	            	<div id="merchantStatusResponseJson" style="display: none;">
+	            		<pre>
+	            			[[model.merchantStatusResponse | json]]
+	            		</pre>
+	            	</div>
+	            	<div id="merchantStatusResponseLoading" style="display: none;">
+	            		<segment-loader></segment-loader>
+	            	</div>
+	            </div>
+            </div>
+        </div>
+    </div>
+</div>    
