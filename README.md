@@ -40,7 +40,7 @@ Information you'll need:
 
 ## Marketplaces Onboarding Connected Path
 
-1. pp-mp-connected-path
+1. [pp-mp-connected-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-connected-path)
 
 *Description:* This onboarding solution allows you to create a PayPal Referral URL and allows your customers to create a PayPal account *OR* link and grant permissions on an existing PayPal account. 
 
@@ -69,8 +69,8 @@ For the first step, this is simplified by the Partner using information they alr
 
 The marketplaces order API is shown here in two modules.
 
-1. pp-mp-order
-2. pp-mp-delayed-order
+1. [pp-mp-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-order)
+2. [pp-mp-delayed-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-delayed-order)
 
 [PayPal Documentation](https://developer.paypal.com/docs/marketplaces/orders/integration-guide/)
 
