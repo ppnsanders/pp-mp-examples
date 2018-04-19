@@ -42,7 +42,7 @@ Information you'll need:
 
 1. [pp-mp-connected-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-connected-path)
 
-*Description:* This onboarding solution allows you to create a PayPal Referral URL and allows your customers to create a PayPal account *OR* link and grant permissions on an existing PayPal account. 
+*Description:* The [Connected Path](https://developer.paypal.com/docs/marketplaces/connected/) onboarding solution allows you to [create a PayPal Referral URL](https://developer.paypal.com/docs/api/partner-referrals/#partner-referrals_create) and allows your customers to create a PayPal account *OR* link and grant permissions on an existing PayPal account. 
 
 *Merchant Experience Steps:*
 
@@ -57,10 +57,10 @@ For the first step, this is simplified by the Partner using information they alr
 *Partner/Connected Path Steps:*
 
 1. Collect Information to build the [partner-referrals](https://developer.paypal.com/docs/api/partner-referrals/#partner-referrals_create) request object.
-2. Create the Referral URL.
+2. Create the [Partner Referral URL](https://developer.paypal.com/docs/api/partner-referrals/#partner-referrals_create).
 3. Redirect the Customer.
 4. Handle the return to your site.
-5. Check the Merchant Account Status [merchant-integrations](https://developer.paypal.com/docs/api/partner-referrals/#merchant-integration).
+5. Check the [Merchant Account Status](https://developer.paypal.com/docs/api/partner-referrals/#merchant-integration).
 
 [PayPal Documentation](https://developer.paypal.com/docs/marketplaces/connected/)
 
@@ -68,11 +68,13 @@ For the first step, this is simplified by the Partner using information they alr
 
 1. [pp-mp-managed-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-managed-path)
 
+*Description:* 
+
 [PayPal Documentation](https://developer.paypal.com/docs/marketplaces/managed/)
 
 ## Marketplaces Order API
 
-The marketplaces order API is shown here in two modules.
+The [Marketplaces Order API](https://developer.paypal.com/docs/api/orders/) is shown here in two modules.
 
 1. [pp-mp-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-order)
 2. [pp-mp-delayed-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-delayed-order)
@@ -93,12 +95,12 @@ The marketplaces order API is shown here in two modules.
 6. Make Payment
 7. Review & Confirm Order
 
-To apply those steps to the PayPal Order API, consider that you would create the order after step 5.  Step 6, "Make Payment", is the part where the consumer goes to PayPal, or enters their credit card details.  When the consumer returns to the merchants website, they will see their order details along with their payment method information and complete the checkout or "Review & Confirm Order".
+To apply those steps to the [Marketplaces Order API](https://developer.paypal.com/docs/api/orders/), consider that you would create the order after step 5.  Step 6, "Make Payment", is the part where the consumer goes to PayPal, or enters their credit card details.  When the consumer returns to the merchants website, they will see their order details along with their payment method information and complete the checkout or "Review & Confirm Order".
 
 *PayPal Order Steps:*
 
-1. Create Order 
-2. Show PayPal Button
+1. [Create Order](https://developer.paypal.com/docs/api/orders/#orders_create)
+2. Show [PayPal Button](https://developer.paypal.com/demo/checkout/#/pattern/checkout)
 3. Handle callback from PayPal.
 4. Pay Order (Confirm Order)
 
@@ -129,12 +131,8 @@ In the above example, all of the steps as discussed in the pp-mp-order use-case 
 
 *PayPal Order Steps:*
 
-1. Create Order
-2. Show PayPal Button
+1. [Create Order](https://developer.paypal.com/docs/api/orders/#orders_create)
+2. Show [PayPal Button](https://developer.paypal.com/demo/checkout/#/pattern/checkout)
 3. Handle callback from PayPal
-4. Pay Order (Confirm Order)
-5. Funds Disbursement
-
-
-
-
+4. [Pay Order](https://developer.paypal.com/docs/api/orders/#orders-payment-actions_pay) (Confirm Order)
+5. [Funds Disbursement](https://developer.paypal.com/docs/api/referenced-payouts/#referenced-payouts-items_create)
