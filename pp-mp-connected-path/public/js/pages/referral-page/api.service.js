@@ -30,6 +30,16 @@ angular.module('ppMpConnectedPath').service('referralPageModel', function ($http
 		$('#createReferralButton').hide('slide')
 		$('#referralResponse').show('slide')
 		$('#referralResponseLoading').show()
+		const tmpMerchantConf = {}
+			  tmpMerchantConf.email = model.referralRequest.customer_data.person_details.email_address
+			  tmpMerchantConf.payerId = ""
+			  tmpMerchantConf.brandName = model.referralRequest.customer_data.business_details.names[0].name
+			  tmpMerchantConf.phone = {}
+			  tmpMerchantConf.phone.countryCode = model.referralRequest.customer_data.business_details.phone_contacts[0].phone_number_details.country_code
+			  tmpMerchantConf.phone.number = model.referralRequest.customer_data.business_details.phone_contacts[0].phone_number_details.national_number
+			  tmpMerchantConf.client_id = ""
+			  $cookies.remove('tmp-merchant-conf')
+			  $cookies.putObject('tmp-merchant-conf', tmpMerchantConf)
 		const reqUrl = '/api/partner-referrals'
 		const config = {
             'xsrfHeaderName': 'X-CSRF-TOKEN',

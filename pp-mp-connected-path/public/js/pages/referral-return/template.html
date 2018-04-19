@@ -15,6 +15,12 @@
             <div class="column" id="merchantStatusResponseObject" style="display: none;">
             	<div class="ui segment">
 	            	<center><h3>Merchant Status Response</h3></center>
+	            	<button id="saveAsDefaultMerchantButton" class="fluid ui primary button" ng-click="model.saveAsDefaultMerchant()">Save as Default Merchant</button>
+	            	<div id="savedAsDefaultMessage" class="ui positive message" style="display: none;">
+					  	<div class="header">
+					    	This merchant has been saved as your default merchant. <span style="float: right;"><i class="green check circle icon"></i></span>
+					  	</div>
+					</div>
 	            	<div id="merchantStatusResponseJson" style="display: none;">
 	            		<div class="ui segment" style="overflow: scroll; margin-top: 20px;">
 		            		<pre>

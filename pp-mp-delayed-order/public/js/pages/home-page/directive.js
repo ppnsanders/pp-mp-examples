@@ -22,21 +22,23 @@ angular.module('ppMpOrder').directive('homePage', [ ($cookies) => {
 				$location.path('/order/create')
 			}
 			$scope.defaultMerchant = () => {
-				$('#defaultMerchantButton').addClass('loading')
-				$scope.merchant.email = "natepartner@sandersx.com"
-				$scope.merchant.payerId = "RHYDUX7DAYVZW"
-				$scope.merchant.brandName = "GithubExamples"
-				$scope.merchant.phone.countryCode = "001"
-				$scope.merchant.phone.number = "8882211161"
-				$scope.merchant.client_id = "ATbvgnf_eArbjPoHBcLggAccplpyElBbJJTAfc9cxQzA-9u6dDubtUnolueBX8UvoofIvY7vCsjGXPSF"
-				setTimeout(() => {
-					$('#defaultMerchantButton').hide()
-				}, 500)	
+				$('#merchantProfile').hide('slide')
+				$location.path('/order/create')
+			}
+			$scope.removeDefaultButton = () => {
+				$('#defaultMerchantButton').hide('slide')
 			}
 			if(typeof $scope.merchantConf === 'undefined') {
-				$('#merchantProfile').show()
+				$('#defaultMerchantButton').hide()
 			} else {
-				$location.path('/order/create')
+				$scope.merchant.email = $scope.merchantConf.email
+				$scope.merchant.payerId = $scope.merchantConf.payerId
+				$scope.merchant.brandName = $scope.merchantConf.brandName
+				$scope.merchant.phone = {}
+				$scope.merchant.phone.countryCode = $scope.merchantConf.phone.countryCode
+				$scope.merchant.phone.number = $scope.merchantConf.phone.number
+				$scope.merchant.client_id = $scope.merchantConf.client_id
+				$('#defaultMerchantButton').show()
 			}
 			$scope.getPartnerConfig = () => {
 				return $http.get('/api/config').then((response) => {

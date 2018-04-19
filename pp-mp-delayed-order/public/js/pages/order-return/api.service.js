@@ -89,6 +89,13 @@ angular.module('ppMpOrder').service('orderReturnModel', function ($http, $cookie
         }
         return $http.post(reqUrl, model.disbursementRequest, config).then((response) => {
 			model.disbursementResponse = response.data
+			if(typeof model.disbursementResponse.name !== 'undefined') {
+				if(model.disbursementResponse.name === 'INTERNAL_ERROR') {
+					setTimeout(() => {
+						$('#disbursementScopeMessage').show()
+					}, 1000)
+				}
+			}
 			setTimeout(() => {
 				$('#disbursementResponseLoading').hide()
 				$('#disbursementResponseJson').show()
