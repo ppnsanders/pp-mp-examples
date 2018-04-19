@@ -88,7 +88,7 @@ angular.module('ppMpOrder').service('orderServiceModel', function ($http, $cooki
 	    model.order.application_context.brand_name = model.merchant.brandName
 	    model.order.application_context.locale = 'en-US'
 	    model.order.application_context.landing_page = 'Login'
-	    model.order.application_context.shipping_preference = 'NO_SHIPPING'
+	    model.order.application_context.shipping_preferences = 'NO_SHIPPING'
 	    model.order.application_context.user_action = 'continue'
 	    //metadata
 	    model.order.metadata = {}
