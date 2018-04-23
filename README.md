@@ -42,7 +42,7 @@ Information you'll need:
 
 1. [pp-mp-connected-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-connected-path)
 
-*Description:* The [Connected Path](https://developer.paypal.com/docs/marketplaces/connected/) onboarding solution allows you to [create a PayPal Referral URL](https://developer.paypal.com/docs/api/partner-referrals/#partner-referrals_create) and allows your customers to create a PayPal account *OR* link and grant permissions on an existing PayPal account. 
+*Description:* A marketplace model in which each individual PayPal seller assumes financial liability, rather than the marketplace. All sellers must have PayPal Business accounts.
 
 *Merchant Experience Steps:*
 
@@ -62,15 +62,21 @@ For the first step, this is simplified by the Partner using information they alr
 4. Handle the return to your site.
 5. Check the [Merchant Account Status](https://developer.paypal.com/docs/api/partner-referrals/#merchant-integration).
 
-[PayPal Documentation](https://developer.paypal.com/docs/marketplaces/connected/)
+*Documentation:*
+
+* [Connected Path vs. Managed Path](https://www.paypal.com/us/selfhelp/article/what-integration-methods-are-available-for-paypal-for-marketplaces-ts2126)
+* [Developer Documentation](https://developer.paypal.com/docs/marketplaces/connected/)
 
 ## Marketplaces Onboarding - Managed Path
 
 1. [pp-mp-managed-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-managed-path)
 
-*Description:* 
+*Description:* A marketplace model in which the marketplace assumes financial liability. Sellers aren't required to have PayPal Business accounts.
 
-[PayPal Documentation](https://developer.paypal.com/docs/marketplaces/managed/)
+*Documentation:*
+
+* [Managed Path vs. Connected Path](https://www.paypal.com/us/selfhelp/article/what-integration-methods-are-available-for-paypal-for-marketplaces-ts2126)
+* [Developer Documentation](https://developer.paypal.com/docs/marketplaces/managed/)
 
 ## Marketplaces Order API
 
@@ -79,7 +85,9 @@ The [Marketplaces Order API](https://developer.paypal.com/docs/api/orders/) is s
 1. [pp-mp-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-order)
 2. [pp-mp-delayed-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-delayed-order)
 
-[PayPal Documentation](https://developer.paypal.com/docs/marketplaces/orders/integration-guide/)
+*Documentation:*
+
+* [Developer Documentation](https://developer.paypal.com/docs/marketplaces/orders/integration-guide/)
 
 ### pp-mp-order
 
