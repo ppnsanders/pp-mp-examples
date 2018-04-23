@@ -26,10 +26,19 @@ angular.module('ppMpManagedPath').service('managedPageModel', function ($http, $
 	}
 
 	function createAccount() {
+		$('#saveAsDefaultMerchantButton').hide()
 		$('#managedFields').hide('slide')
 		$('#createAccountButton').hide('slide')
 		$('#managedResponse').show('slide')
 		$('#managedResponseLoading').show()
+		model.tmpMerchantConf.email = model.managedRequest.owner_info.email
+		model.tmpMerchantConf.payerId = ""
+		model.tmpMerchantConf.brandName = model.managedRequest.business_info.names[0].name
+		model.tmpMerchantConf.phone = {}
+		model.tmpMerchantConf.phone.countryCode = model.managedRequest.owner_info.phones[0].country_code
+		model.tmpMerchantConf.phone.number = model.managedRequest.owner_info.phones[0].national_number
+		$cookies.remove('tmp-merchant-conf')
+		$cookies.putObject('tmp-merchant-conf', model.tmpMerchantConf)
 		const reqUrl = '/api/merchant-accounts'
 		const config = {
             'xsrfHeaderName': 'X-CSRF-TOKEN',
@@ -37,18 +46,31 @@ angular.module('ppMpManagedPath').service('managedPageModel', function ($http, $
         }
 		return $http.post(reqUrl, model.managedRequest, config).then((response) => {
 			model.managedResponse = response.data
+			model.tmpMerchantConf.payerId = model.managedResponse.payer_id
 			setTimeout(() => {
 				$('#managedResponseLoading').hide()
-				$('#createPayPalAccountButton').show()
+				$('#saveAsDefaultMerchantButton').show()
 				$('#managedResponseJson').show()
 			}, 500)
 		})
+	}
+
+	function saveAsDefaultMerchant() {
+		$('#saveAsDefaultMerchantButton').addClass('loading')
+		$cookies.remove('merchant-conf')
+		$cookies.putObject('merchant-conf', model.tmpMerchantConf)
+		setTimeout(() => {
+			$('#saveAsDefaultMerchantButton').removeClass('loading')
+			$('#saveAsDefaultMerchantButton').hide()
+			$('#savedAsDefaultMessage').show()
+		}, 500)
 	}
 
 	let model = {
 		partner: {},
 		managedRequest: {},
 		managedResponse: {},
+		tmpMerchantConf: {},
 		setup: (model) => {
 			return setup(model)
 		},
@@ -60,6 +82,9 @@ angular.module('ppMpManagedPath').service('managedPageModel', function ($http, $
 		},
 		createAccount: (model) => {
 			return createAccount(model)
+		},
+		saveAsDefaultMerchant: (model) => {
+			return saveAsDefaultMerchant(model)
 		}
 	}
 
