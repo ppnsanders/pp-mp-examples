@@ -44,6 +44,8 @@ Information you'll need:
 
 *Description:* A marketplace model in which each individual PayPal seller assumes financial liability, rather than the marketplace. All sellers must have PayPal Business accounts.
 
+> Once you create/link a merchant account with Connected-Path you can "Save as default".  Once you save that merchant if you open the [pp-mp-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-order) or [pp-mp-delayed-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-delayed-order) apps you will see your newly created/linked merchant info in the Default config.  Click "Use Default Merchant" to continue to create the Order and run the checkout.
+
 *Merchant Experience Steps:*
 
 1. Fill out forms.
@@ -72,6 +74,8 @@ For the first step, this is simplified by the Partner using information they alr
 1. [pp-mp-managed-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-managed-path)
 
 *Description:* A marketplace model in which the marketplace assumes financial liability. Sellers aren't required to have PayPal Business accounts.
+
+> Once you create a reference account with Managed-Path you can "Save as default".  Once you save that reference account if you open the [pp-mp-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-order) or [pp-mp-delayed-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-delayed-order) apps you will see your newly created reference account info in the Default config.  Click "Use Default Merchant" to continue to create the Order and run the checkout.
 
 *Documentation:*
 
