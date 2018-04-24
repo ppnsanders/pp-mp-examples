@@ -10,6 +10,24 @@
 4. Run `$ node install.js`
 5. Run `$ node setup.js`  //See the configuration section below for details.
 
+## Running the Demo App
+
+This repository contains 4 independent applications:
+
+1. [pp-mp-connected-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-connected-path)
+2. [pp-mp-managed-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-managed-path)
+3. [pp-mp-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-order)
+4. [pp-mp-delayed-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-delayed-order)
+
+I have built these as individual applications to ensure that you can test/demo the specific pieces you want to use and don't need to run all of them or look through multiple files of code to see how it all works.
+
+Once you have ran the initial Setup & Install, you can then run the following commands:
+
+1. Run `$ cd pp-mp-order`
+2. Run `$ npm start`
+
+The Setup & Install already installed all the NPM dependencies for all of the apps, so this should start up without any issues.  You would change the `pp-mp-order` in the above command to the appropriate directory for the app you want to run (i.e. `pp-mp-connected-path`, `pp-mp-managed-path`, or `pp-mp-delayed-order`).
+
 ## Configuration
 
 When you run `$ node setup.js` you'll be prompted for your `client_id`, `client_secret`, `attributionId`, `email`, `payerId`, `brandName`, and `environment`.  These are your PARTNER details, not your merchant details.  This will allow you to run transactions as the Partner on behalf of a merchant. 
