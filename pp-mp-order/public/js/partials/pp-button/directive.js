@@ -13,11 +13,12 @@ angular.module('ppMpOrder').directive('ppButton', [ () => {
 					layout: 'vertical',
 			        color: 'blue',
 			        size: 'large',
-			        shape: 'rect'
+			        shape: 'rect',
+			        maxbuttons: 1 //Supressing Venmo as Venmo isn't available for Marketplaces yet.
 			}
 			$scope.funding = {
-				allowed: [ paypal.FUNDING.CARD ],
-				disallowed: [ paypal.FUNDING.CREDIT ]
+				allowed: [],
+				disallowed: [ paypal.FUNDING.CREDIT, paypal.FUNDING.CARD ]
 			}
 			$scope.payment = function () {
 				return $scope.orderid
