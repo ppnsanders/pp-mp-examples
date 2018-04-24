@@ -14,7 +14,7 @@ angular.module('ppMpOrder').directive('ppButton', [ () => {
 			        color: 'blue',
 			        size: 'large',
 			        shape: 'rect',
-			        maxbuttons: 1 //Supressing Venmo as Venmo isn't available for Marketplaces yet.
+			        maxbuttons: 1 
 			}
 			$scope.funding = {
 				allowed: [],
