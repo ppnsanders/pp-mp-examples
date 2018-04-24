@@ -8,7 +8,7 @@
 2. Run `$ cd pp-mp-examples`
 3. Run `$ npm install`
 4. Run `$ node install.js`
-5. Run `$ node setup.js`  //See the configuration section below for details.
+5. Run `$ node setup.js`  //See the [configuration section below](https://github.com/ppnsanders/pp-mp-examples#configuration) for details.
 
 ## Running the Demo App
 
