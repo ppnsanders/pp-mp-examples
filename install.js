@@ -20,6 +20,11 @@ const apps = [
 				name: 'pp-mp-managed-path',
 				npm: true,
 				bower: true
+			},
+			{
+				name: 'pp-mp-billing-agreements',
+				npm: true,
+				bower: true
 			}
 		]
 
