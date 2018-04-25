@@ -102,7 +102,6 @@ module.exports = (router) => {
 
   router.get('/:baId', (req, res) => {
     getAccessToken(paypalConfig, (err, credentials) => {
-      https://api.sandbox.paypal.com/v1/billing-agreements/agreements/{{Billing_Agreement_ID}}
       if(err) {
         console.log('ERROR')
         console.log(err)
