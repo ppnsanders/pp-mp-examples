@@ -1,9 +1,9 @@
 pp-mp-billing-agreements
 ===========
 
-PayPal Marketplaces - Billing Agreements
+PayPal For Platforms - Billing Agreements
 
-*Description:* Enable your customers to save PayPal as a payment method on your *marketplace* or *Platform* and use that payment method to pay for an order from any merchant.  This type of Billing Agreement is known as a "Channel Initiated Billing Agreement" or "CIB" for short.  This example shows the Channel Initiated Billing Agreement Flow with an Order and `disbursement_mode: INSTANT`.
+**Description:** Enable your customers to save PayPal as a payment method on your Platform and use that payment method to pay for an order from any merchant on your Platform.  This type of Billing Agreement is known as a "Channel Initiated Billing Agreement" or "CIB" for short.  This example shows the Channel Initiated Billing Agreement Flow with an Order and `disbursement_mode: INSTANT`.
 
 *Consumer Experience Steps:*
 

@@ -1,9 +1,9 @@
 pp-mp-order
 ===========
 
-PayPal Marketplaces Order - Instant Disbursement
+PayPal For Platforms Order - Instant Disbursement
 
-*Description:* This PayPal use-case is a very common use-case.  Most commonly known in PayPal terms as the "PayPal Mark Use-Case".  This is where the Consumer goes through a checkout flow in a very similar way that they do to use a credit card on the merchants website. 
+**Description:** This PayPal use-case is a very common use-case.  Most commonly known in PayPal terms as the "PayPal Mark Use-Case".  This is where the Consumer goes through a checkout flow in a very similar way that they do to use a credit card on the merchants website. 
 
 *Consumer Experience Steps:*
 
@@ -15,11 +15,11 @@ PayPal Marketplaces Order - Instant Disbursement
 6. Make Payment
 7. Review & Confirm Order
 
-To apply those steps to the PayPal Order API, consider that you would create the order after step 5.  Step 6, "Make Payment", is the part where the consumer goes to PayPal, or enters their credit card details.  When the consumer returns to the merchants website, they will see their order details along with their payment method information and complete the checkout or "Review & Confirm Order".
+To apply those steps to the [PayPal For Platforms Order API](https://developer.paypal.com/docs/api/orders/), consider that you would create the order after step 5.  Step 6, "Make Payment", is the part where the consumer goes to PayPal, or enters their credit card details.  When the consumer returns to the merchants website, they will see their order details along with their payment method information and complete the checkout or "Review & Confirm Order".
 
 *PayPal Order Steps:*
 
-1. Create Order 
-2. Show PayPal Button
+1. [Create Order](https://developer.paypal.com/docs/api/orders/#orders_create)
+2. Show [PayPal Button](https://developer.paypal.com/demo/checkout/#/pattern/checkout)
 3. Handle callback from PayPal.
 4. Pay Order (Confirm Order)
