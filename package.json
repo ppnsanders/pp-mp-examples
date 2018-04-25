@@ -1,7 +1,7 @@
 {
   "name": "pp-mp-examples",
   "version": "0.0.1",
-  "description": "PayPal Marketplaces API Example Apps",
+  "description": "PayPal For Platforms - API Examples",
   "main": "install.js",
   "scripts": {
     "test": "test"
