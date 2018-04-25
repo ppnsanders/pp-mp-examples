@@ -143,7 +143,6 @@ angular.module('ppMpBillingAgreements').service('orderServiceModel', function ($
         }
 		return $http.post(reqUrl, model.order, config).then((response) => {
 			model.orderResponse = response.data
-			$cookies.remove('order-data')
 			$cookies.putObject('order-data', model.orderResponse)
 			setTimeout(() => {
 				$('#orderResponseLoading').hide()

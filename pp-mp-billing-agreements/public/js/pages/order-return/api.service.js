@@ -72,6 +72,7 @@ angular.module('ppMpBillingAgreements').service('orderReturnModel', function ($h
         }
 		return $http.post(reqUrl, model.payOrderRequest, config).then((response) => {
 			model.payOrderResponse = response.data
+			$cookies.remove('order-data')
 			setTimeout(() => {
 				$('#payOrderResponseLoading').hide()
 				$('#payOrderResponseJson').show()

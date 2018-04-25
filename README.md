@@ -1,4 +1,4 @@
-# PayPal For Platforms (Marketplaces) API Example Apps
+# PayPal For Platforms API Example Apps
 
 -----
 
