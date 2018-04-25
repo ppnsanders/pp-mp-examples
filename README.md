@@ -1,6 +1,8 @@
-# PayPal Marketplaces API Example Apps
+# PayPal For Platforms (Marketplaces) API Example Apps
 
 -----
+
+> **Disclaimer:** The applications provided here and all code is provided as-is.  These examples are intended to be **EXAMPLES** and are not intended to be used in a production environment.  I am employed at PayPal, however, the code herein is provided from myself as an example not from PayPal, Inc.  I hope these are helpful to helping you understand the API's, but please do not use in a production environment.
 
 ## Setup & Install
 
@@ -57,13 +59,13 @@ Information you'll need:
 | `brandName` | This is your Partner "Brand Name", this may be the name of your company or application. |
 | `environment` | This is the environment you wish to test with.  Default value is `sandbox` |
 
-## Marketplaces Onboarding - Connected Path
+## PayPal For Platforms - Onboarding - Connected Path
 
 1. [pp-mp-connected-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-connected-path)
 
-*Description:* A marketplace model in which each individual PayPal seller assumes financial liability, rather than the marketplace. All sellers must have PayPal Business accounts.
+**Description:** A platform model in which each individual PayPal seller assumes financial liability, rather than the platform. All sellers must have PayPal Business accounts.
 
-> Once you create/link a merchant account with Connected-Path you can "Save as default".  Once you save that merchant if you open the [pp-mp-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-order) or [pp-mp-delayed-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-delayed-order) apps you will see your newly created/linked merchant info in the Default config.  Click "Use Default Merchant" to continue to create the Order and run the checkout.
+> Within the app, once you create/link a merchant account with Connected-Path you can "Save as default".  Once you save that merchant if you open the [pp-mp-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-order) or [pp-mp-delayed-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-delayed-order) apps you will see your newly created/linked merchant info in the Default config.  Click "Use Default Merchant" to continue to create the Order and run the checkout.
 
 *Merchant Experience Steps:*
 
@@ -83,39 +85,39 @@ For the first step, this is simplified by the Partner using information they alr
 4. Handle the return to your site.
 5. Check the [Merchant Account Status](https://developer.paypal.com/docs/api/partner-referrals/#merchant-integration).
 
-*Documentation:*
+**Documentation:**
 
 * [Connected Path vs. Managed Path](https://www.paypal.com/us/selfhelp/article/what-integration-methods-are-available-for-paypal-for-marketplaces-ts2126)
 * [Developer Documentation](https://developer.paypal.com/docs/marketplaces/connected/)
 
-## Marketplaces Onboarding - Managed Path
+## PayPal For Platforms - Onboarding - Managed Path
 
 1. [pp-mp-managed-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-managed-path)
 
-*Description:* A marketplace model in which the marketplace assumes financial liability. Sellers aren't required to have PayPal Business accounts.
+*Description:* A platform model in which **the platform assumes financial liability**. Sellers are **NOT** required to have PayPal Business accounts.
 
-> Once you create a reference account with Managed-Path you can "Save as default".  Once you save that reference account if you open the [pp-mp-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-order) or [pp-mp-delayed-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-delayed-order) apps you will see your newly created reference account info in the Default config.  Click "Use Default Merchant" to continue to create the Order and run the checkout.
+> Within the app, once you create a reference account with Managed-Path you can "Save as default".  Once you save that reference account if you open the [pp-mp-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-order) or [pp-mp-delayed-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-delayed-order) apps you will see your newly created reference account info in the Default config.  Click "Use Default Merchant" to continue to create the Order and run the checkout.
 
 *Documentation:*
 
 * [Managed Path vs. Connected Path](https://www.paypal.com/us/selfhelp/article/what-integration-methods-are-available-for-paypal-for-marketplaces-ts2126)
 * [Developer Documentation](https://developer.paypal.com/docs/marketplaces/managed/)
 
-## Marketplaces Order API
+## PayPal For Platforms - Order API
 
-The [Marketplaces Order API](https://developer.paypal.com/docs/api/orders/) is shown here in three modules.
+The [PayPal For Platforms Order API](https://developer.paypal.com/docs/api/orders/) is shown here in three modules.
 
 1. [pp-mp-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-order)
 2. [pp-mp-delayed-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-delayed-order)
 3. [pp-mp-billing-agreements](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-billing-agreements)
 
-*Documentation:*
+**Documentation:**
 
 * [Developer Documentation](https://developer.paypal.com/docs/marketplaces/orders/integration-guide/)
 
 ### pp-mp-order
 
-*Description:* This PayPal use-case is a very common use-case.  Most commonly known in PayPal terms as the "PayPal Mark Use-Case".  This is where the Consumer goes through a checkout flow in a very similar way that they do to use a credit card on the merchants website. 
+**Description:** This PayPal use-case is a very common use-case.  Most commonly known in PayPal terms as the "PayPal Mark Use-Case".  This is where the Consumer goes through a checkout flow in a very similar way that they do to use a credit card on the merchants website. 
 
 *Consumer Experience Steps:*
 
@@ -127,7 +129,7 @@ The [Marketplaces Order API](https://developer.paypal.com/docs/api/orders/) is s
 6. Make Payment
 7. Review & Confirm Order
 
-To apply those steps to the [Marketplaces Order API](https://developer.paypal.com/docs/api/orders/), consider that you would create the order after step 5.  Step 6, "Make Payment", is the part where the consumer goes to PayPal, or enters their credit card details.  When the consumer returns to the merchants website, they will see their order details along with their payment method information and complete the checkout or "Review & Confirm Order".
+To apply those steps to the [PayPal For Platforms Order API](https://developer.paypal.com/docs/api/orders/), consider that you would create the order after step 5.  Step 6, "Make Payment", is the part where the consumer goes to PayPal, or enters their credit card details.  When the consumer returns to the merchants website, they will see their order details along with their payment method information and complete the checkout or "Review & Confirm Order".
 
 *PayPal Order Steps:*
 
@@ -138,9 +140,11 @@ To apply those steps to the [Marketplaces Order API](https://developer.paypal.co
 
 ### pp-mp-delayed-order
 
-*Description:* This PayPal use-case is very similar to the above pp-mp-order use-case with the exception that the Marketplace has the ability to delay the disbursement of the payment to the seller/merchant.  This helps the Marketplace manage risk and improve the overall consumer experience.  I will use a simple example here to articulate the concept, but there may be other use-cases. 
+**Description:** This PayPal use-case is very similar to the above pp-mp-order use-case with the exception that the Platform has the ability to delay the disbursement of the payment to the seller/merchant.  This helps the Platform manage risk and improve the overall consumer experience.  I will use a simple example here to articulate the concept, but there are many other use-cases. 
 
-_Example:_  A Seller is selling an item on your Marketplace and the price of that item is $500.00 USD.  This is a new Seller that hasn't done business on your Marketplace before and selling such a high dollar item isn't very common on your particular Marketplace.  Without any limitations on the Seller, you could do a number of things to reduce the risk with this item.  You choose to delay disbursement to the Seller until the Seller has provided a Tracking Number for the shippment of the item, and that Tracking Number shows that the item was received at the address provided by the consumer.
+_Example:_  A Seller is selling an item on your Platform and the price of that item is $500.00 USD.  This is a new Seller that hasn't done business on your Platform before and selling such a high dollar item isn't very common on your particular Platform.  Without any limitations on the Seller, you could do a number of things to reduce the risk with this item.  You choose to delay disbursement to the Seller until the Seller has provided a Tracking Number for the shippment of the item, and that Tracking Number shows that the item was received at the address provided by the consumer.
+
+> **Disclaimer:** The above example is purely an example, not a recommendation.  The use-case that justifies your usage of delayed disbursement could be a million things and is up to you as the Platform owner.
 
 *Consumer Experience Steps:*
 
@@ -152,14 +156,14 @@ _Example:_  A Seller is selling an item on your Marketplace and the price of tha
 6. Make Payment
 7. Review & Confirm Order
 
-In the above example, all of the steps as discussed in the pp-mp-order use-case apply, the consumer goes through checkout in the same manner.  The difference is that the Marketplace doesn't allow PayPal to disburse the funds to the Seller until your criteria is met.  This allows you to protect the consumer by ensuring that the item shows valid tracking with delivery before giving the Seller the funds.
+In the above example, all of the steps as discussed in the pp-mp-order use-case apply, the consumer goes through checkout in the same manner.  The difference is that the Platform doesn't allow PayPal to disburse the funds to the Seller until your criteria is met.  This allows you to protect the consumer by ensuring that the item shows valid tracking with delivery before giving the Seller the funds.
 
 *Seller Experience Steps:*
 
-1. Seller's item is sold on the Marketplace.
+1. Seller's item is sold on the Platform.
 2. Seller ships the item and uploads the relevant tracking number.
 3. The tracking number shows that it was delivered at the City/State of the Consumer's shipping address.
-4. The Marketplace disburses the funds to the seller as per the Marketplace terms of service with the Seller.
+4. The Platform disburses the funds to the seller as per the Platform terms of service with the Seller.
 
 *PayPal Order Steps:*
 
@@ -171,7 +175,7 @@ In the above example, all of the steps as discussed in the pp-mp-order use-case 
 
 ### pp-mp-billing-agreements
 
-*Description:* Enable your customers to save PayPal as a payment method on your *marketplace* or *Platform* and use that payment method to pay for an order from any merchant.  This type of Billing Agreement is known as a "Channel Initiated Billing Agreement" or "CIB" for short.  This example shows the Channel Initiated Billing Agreement Flow with an Order and `disbursement_mode: INSTANT`.
+*Description:* Enable your customers to save PayPal as a payment method on your Platform and use that payment method to pay for an order from any merchant on your Platform.  This type of Billing Agreement is known as a "Channel Initiated Billing Agreement" or "CIB" for short.  This example shows the Channel Initiated Billing Agreement Flow with an Order and `disbursement_mode: INSTANT`.
 
 *Consumer Experience Steps:*
 
