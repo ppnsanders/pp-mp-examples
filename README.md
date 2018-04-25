@@ -85,6 +85,8 @@ For the first step, this is simplified by the Partner using information they alr
 4. Handle the return to your site.
 5. Check the [Merchant Account Status](https://developer.paypal.com/docs/api/partner-referrals/#merchant-integration).
 
+> Note: When using the Connected-Path Integration you'll need to use an existing Sandbox Account to test the permissioning and any following API's.  The reason for this is because you can't confirm an email address via the Connected Path API.  So first, go to [developer.paypal.com](https://developer.paypal.com/developer/accounts/) in the Accounts Section and click "Create Account".  You will create the account here as it will automatically confirm the email on the account.  This way, when you go to PayPal within the Connected-Path flow, you'll use that account to login & grant permissions to the Partner Account for future API's/Processes. 
+
 **Documentation:**
 
 * [Connected Path vs. Managed Path](https://www.paypal.com/us/selfhelp/article/what-integration-methods-are-available-for-paypal-for-marketplaces-ts2126)
