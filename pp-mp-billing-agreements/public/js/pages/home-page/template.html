@@ -1,0 +1,41 @@
+<div id="merchantProfile">
+    <div class="ui grid">
+        <div class="two column row">
+            <div class="column"><h2>Merchant Configuration</h2></div>
+            <div class="column"><span id="merchantInfoSaved" style="display: none; float: right;"><i class="green big check circle icon"></i> Saved</span></div>
+        </div>
+    </div>
+    <hr />
+    <div id="merchantConfigForm">
+        <form class="ui form">
+            <div class="field">
+                <label>Email Address: </label>
+                <input type="text" ng-model="merchant.email" name="merchant.email" ng-required="true" ng-change="removeDefaultButton()">
+            </div>
+            <div class="field">
+                <label>Payer ID: </label>
+                <input type="text" ng-model="merchant.payerId" name="merchant.payerId" ng-required="true" ng-change="removeDefaultButton()">
+            </div>
+            <div class="field">
+                <label>Partner Brand Name: </label>
+                <input type="text" ng-model="merchant.brandName" name="merchant.brandName" ng-required="false" ng-change="removeDefaultButton()">
+            </div>
+            <div class="field">
+                <label>Phone Country Code: </label>
+                <input type="text" ng-model="merchant.phone.countryCode" name="merchant.phone.countryCode" ng-required="false" ng-change="removeDefaultButton()">
+            </div>
+            <div class="field">
+                <label>Phone Number: </label>
+                <input type="text" ng-model="merchant.phone.number" name="merchant.phone.number" ng-required="false" ng-change="removeDefaultButton()">
+            </div>
+            <div class="field">
+                <label>Client ID: </label>
+                <input type="text" ng-model="merchant.client_id" name="merchant.client_id" ng-required="true" ng-change="removeDefaultButton()">
+            </div>
+            <button id="setMerchantButton" class="ui primary button" type="button" ng-click="setMerchant()">Save</button>
+            <button id="defaultMerchantButton" class="ui button" type="button" ng-click="defaultMerchant()" style="display: none;">Use Default Merchant</button>
+        </form>
+    </div>
+    <div style="margin-top: 60px"></div>
+</div>
+<div ng-view></div>

@@ -1,0 +1,100 @@
+<div id="orderView">
+    <div class="ui grid">
+        <div class="two column row">
+            <div class="column" id="onAuthorizeData" style="display: none;">
+            	<center><h3>onAuthorize(data)</h3></center>
+            	<div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+            		<pre>
+	            		[[model.action.onAuthorize | json]]
+	            	</pre>
+	            </div>
+            </div>
+            <div class="column" id="onCancelData" style="display: none;">
+            	<center><h3>onCancel(data)</h3></center>
+            	<button id="cancelOrderButton" class="fluid ui primary button" ng-click="model.cancelOrder()">Cancel Order</button>
+            	<div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+            		<pre>
+	            		[[model.action.onCancel | json]]
+	            	</pre>
+	            </div>
+            </div>
+            <div class="column" id="onErrorData" style="display: none;">
+            	<center><h3>onError(data)</h3></center>
+            	<div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+            		<pre>
+	            		[[model.action.onError | json]]
+	            	</pre>
+	            </div>
+            </div>
+            <div class="column" id="executeBillingAgreement" style="display: none;">
+                <center><h3>Execute Billing Agreement</h3></center>
+                <button id="executeBillingAgreementButton" class="fluid ui primary button" ng-click="model.executeBillingAgreement()">Execute Billing Agreement</button>
+                <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+                    <pre>
+                        POST https://api.sandbox.paypal.com/v1/billing-agreements/[[model.action.onAuthorize.billingToken]]/agreements
+                    </pre>
+                </div>
+            </div>
+            <div class="column" id="executeBillingAgreementResponse" style="display: none;">
+                <center><h3>Execute Billing Agreement Response</h3></center>
+                <button id="setPayOrderButton" class="fluid ui primary button" ng-click="model.setPayOrderRequest()">Continue to Pay Order</button>
+                <div id="executeBillingAgreementResponseJson" style="display: none;">
+                    <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+                        <pre>
+                            [[model.executeBillingAgreementResponse | json]]
+                        </pre>
+                    </div>
+                </div>
+                <div id="executeBillingAgreementResponseLoading" style="display: none;">
+                    <segment-loader></segment-loader>
+                </div>
+            </div>
+            <div class="column" id="payOrderRequestFields" style="display: none;">
+            	<center><h3>Pay Order Fields</h3></center>
+                <div class="ui form">
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>disbursement_mode:</label>
+                            <input type="text" ng-model="model.payOrderRequest.disbursement_mode">
+                        </div>
+                    </div>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>payer.payment_method: </label>
+                            <input type="text" ng-model="model.payOrderRequest.payer.payment_method">
+                        </div>
+                    </div>
+                    <h4 class="ui dividing header">payer.funding_instruments[0].billing</h4>
+                    <div class="inline fields">
+                        <div class="sixteen wide field">
+                            <label>.billing_agreement_id: </label>
+                            <input type="text" ng-model="model.payOrderRequest.payer.funding_instruments[0].billing.billing_agreement_id">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column" id="payOrderRequestObject" style="display: none;">
+            	<center><h3>Pay Order Request</h3></center>
+            	<button id="payOrderButton" class="fluid ui primary button" ng-click="model.payOrder()">Pay Order</button>
+	            <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+	            	<pre>
+	            		[[model.payOrderRequest | json]]
+	            	</pre>
+	            </div>
+            </div>
+            <div class="column" id="payResponseObject" style="display: none;">
+            	<center><h3>Pay Order Response</h3></center>
+            	<div id="payOrderResponseJson" style="display: none;">
+            		<div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+	            		<pre>
+	            			[[model.payOrderResponse | json]]
+	            		</pre>
+	            	</div>
+            	</div>
+            	<div id="payOrderResponseLoading" style="display: none;">
+            		<segment-loader></segment-loader>
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>    

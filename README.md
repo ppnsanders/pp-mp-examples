@@ -12,12 +12,13 @@
 
 ## Running the Demo App
 
-This repository contains 4 independent applications:
+This repository contains 5 independent applications:
 
 1. [pp-mp-connected-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-connected-path)
 2. [pp-mp-managed-path](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-managed-path)
 3. [pp-mp-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-order)
 4. [pp-mp-delayed-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-delayed-order)
+5. [pp-mp-billing-agreements](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-billing-agreements)
 
 I have built these as individual applications to ensure that you can test/demo the specific pieces you want to use and don't need to run all of them or look through multiple files of code to see how it all works.
 
@@ -26,7 +27,7 @@ Once you have ran the initial Setup & Install, you can then run the following co
 1. Run `$ cd pp-mp-order`
 2. Run `$ npm start`
 
-The Setup & Install already installed all the NPM dependencies for all of the apps, so this should start up without any issues.  You would change the `pp-mp-order` in the above command to the appropriate directory for the app you want to run (i.e. `pp-mp-connected-path`, `pp-mp-managed-path`, or `pp-mp-delayed-order`).
+The Setup & Install already installed all the NPM dependencies for all of the apps, so this should start up without any issues.  You would change the `pp-mp-order` in the above command to the appropriate directory for the app you want to run (i.e. `pp-mp-order`, `pp-mp-connected-path`, `pp-mp-managed-path`, `pp-mp-billing-agreements`, or `pp-mp-delayed-order`).
 
 ## Configuration
 
@@ -102,10 +103,11 @@ For the first step, this is simplified by the Partner using information they alr
 
 ## Marketplaces Order API
 
-The [Marketplaces Order API](https://developer.paypal.com/docs/api/orders/) is shown here in two modules.
+The [Marketplaces Order API](https://developer.paypal.com/docs/api/orders/) is shown here in three modules.
 
 1. [pp-mp-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-order)
 2. [pp-mp-delayed-order](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-delayed-order)
+3. [pp-mp-billing-agreements](https://github.com/ppnsanders/pp-mp-examples/tree/master/pp-mp-billing-agreements)
 
 *Documentation:*
 
@@ -166,3 +168,27 @@ In the above example, all of the steps as discussed in the pp-mp-order use-case 
 3. Handle callback from PayPal
 4. [Pay Order](https://developer.paypal.com/docs/api/orders/#orders-payment-actions_pay) (Confirm Order)
 5. [Funds Disbursement](https://developer.paypal.com/docs/api/referenced-payouts/#referenced-payouts-items_create)
+
+### pp-mp-billing-agreements
+
+*Description:* Enable your customers to save PayPal as a payment method on your *marketplace* or *Platform* and use that payment method to pay for an order from any merchant.  This type of Billing Agreement is known as a "Channel Initiated Billing Agreement" or "CIB" for short.  This example shows the Channel Initiated Billing Agreement Flow with an Order and `disbursement_mode: INSTANT`.
+
+*Consumer Experience Steps:*
+
+1. Add items to the cart.
+2. Checkout
+3. Fill out Shipping information.
+4. Select shipping method.
+5. See total (Subtotal + Shipping + Tax)
+6. Agree to Billing Agreement
+7. Review & Confirm Order
+
+*Partner API Steps:*
+
+1. [Create Order](https://developer.paypal.com/docs/api/orders/#orders_create)
+2. Create Billing Agreement Token
+3. Handle callback from PayPal
+4. Execute Billing Agreeement Token
+5. [Using the Billing Agreement Pay for the Order](https://developer.paypal.com/docs/marketplaces/orders/integration-guide/#additional-ways-to-pay)
+
+The Billing Agreement ID returned in the `/execute` API call can be saved and used for future transactions with any merchant on your platform.

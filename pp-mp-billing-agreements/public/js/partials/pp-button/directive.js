@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('ppMpOrder').directive('ppButton', [ () => {
+angular.module('ppMpBillingAgreements').directive('ppButton', [ () => {
 	return {
 		restrict: 'E',
 		scope: {
@@ -14,7 +14,7 @@ angular.module('ppMpOrder').directive('ppButton', [ () => {
 			        color: 'blue',
 			        size: 'large',
 			        shape: 'rect',
-			        maxbuttons: 1
+			        maxbuttons: 1 
 			}
 			$scope.funding = {
 				allowed: [],
