@@ -17,8 +17,10 @@
         "eslint": "^1.10.3",
         "express": "^4.12.2",
         "faker": "^4.1.0",
+        "growl": "^1.10.5",
         "kraken-js": "^2.0.0",
         "makara": "^2.0.3",
+        "node-growl": "^0.1.1",
         "request": "^2.85.0"
     },
     "devDependencies": {
