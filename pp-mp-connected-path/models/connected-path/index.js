@@ -27,6 +27,7 @@ module.exports = function ConnectedPathMerchantModel() {
     	newMerchant.web_experience_preference.partner_logo_url = faker.image.imageUrl(200, 200, 'technics', true)
     	newMerchant.web_experience_preference.return_url = 'http://localhost:8000/referral-return'
     	newMerchant.web_experience_preference.action_renewal_url = 'http://localhost:8000/referral-return'
+        newMerchant.web_experience_preference.use_mini_browser = true
     	//collected_consents
     	newMerchant.collected_consents = []
     	newMerchant.collected_consents[0] = {}

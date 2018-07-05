@@ -5,11 +5,18 @@ angular.module('ppMpConnectedPath').service('referralPageModel', function ($http
 	function setup() {
 		model.getPartnerConfig()
 		model.getReferralRequest()
+		model.getReferralRequestCasualSeller()
 	}
 
 	function getReferralRequest() {
 		$http.get('/api/newMerchant').then((response) => {
 			model.referralRequest = response.data
+		})
+	}
+
+	function getReferralRequestCasualSeller() {
+		$http.get('/api/newSeller').then((response) => {
+			model.sellerReferralRequest = response.data
 		})
 	}
 
@@ -55,9 +62,40 @@ angular.module('ppMpConnectedPath').service('referralPageModel', function ($http
 		})
 	}
 
+	function createSellerReferral() {
+		$('#referralFields').hide('slide')
+		$('#createReferralButton').hide('slide')
+		$('#referralResponse').show('slide')
+		$('#referralResponseLoading').show()
+		const tmpSellerConf = {}
+			  tmpSellerConf.email = model.sellerReferralRequest.customer_data.person_details.email_address
+			  tmpSellerConf.payerId = ""
+			  tmpSellerConf.brandName = model.sellerReferralRequest.customer_data.person_details.name.given_name + " " + model.sellerReferralRequest.customer_data.person_details.name.surname
+			  tmpSellerConf.phone = {}
+			  tmpSellerConf.phone.countryCode = ""
+			  tmpSellerConf.phone.number = ""
+			  tmpSellerConf.client_id = ""
+			  $cookies.remove('tmp-merchant-conf')
+			  $cookies.putObject('tmp-merchant-conf', tmpSellerConf)
+		const reqUrl = '/api/partner-referrals'
+		const config = {
+            'xsrfHeaderName': 'X-CSRF-TOKEN',
+            'xsrfCookieName': 'XSRF-TOKEN'
+        }
+		return $http.post(reqUrl, model.sellerReferralRequest, config).then((response) => {
+			model.referralResponse = response.data
+			setTimeout(() => {
+				$('#referralResponseLoading').hide()
+				$('#createPayPalAccountButton').show()
+				$('#referralResponseJson').show()
+			}, 500)
+		})
+	}
+
 	let model = {
 		partner: {},
 		referralRequest: {},
+		sellerReferralRequest: {},
 		referralResponse: {},
 		setup: (model) => {
 			return setup(model)
@@ -70,6 +108,12 @@ angular.module('ppMpConnectedPath').service('referralPageModel', function ($http
 		},
 		createReferral: (model) => {
 			return createReferral(model)
+		},
+		createSellerReferral: (model) => {
+			return createSellerReferral(model)
+		},
+		getReferralRequestCasualSeller: (model) => {
+			return getReferralRequestCasualSeller(model)
 		}
 	}
 

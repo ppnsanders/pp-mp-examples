@@ -2,6 +2,7 @@
 const paypalConfig = ppConfig()
 const request = require('request')
 const ConnectedPathMerchantModel = require('../../models/connected-path')
+const ConnectedPathSellerModel = require('../../models/connected-path/casualSeller')
 
 module.exports = (router) => {
 
@@ -13,6 +14,11 @@ module.exports = (router) => {
 		const merchantObj = new ConnectedPathMerchantModel()
 		res.json(merchantObj)
 	})
+
+  router.get('/newSeller', (req, res) => {
+    const sellerObj = new ConnectedPathSellerModel()
+    res.json(sellerObj)
+  })
 
 	router.get('/status/:merchantId', (req, res) => {
 		getAccessToken(paypalConfig, (err, credentials) => {

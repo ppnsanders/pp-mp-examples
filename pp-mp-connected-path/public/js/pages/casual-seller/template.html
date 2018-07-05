@@ -1,0 +1,224 @@
+<div id="referralView">
+    <div class="ui grid">
+        <div class="two column row">
+            <div class="column" id="referralFields">
+                <center><h3>Referral Fields</h3></center>
+                <div class="ui segment">
+	                <div class="ui form">
+	                	<h4 class="ui dividing header">requested_capabilities[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.capability:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.requested_capabilities[0].capability">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">requested_capabilities[0].api_integration_preference</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.partner_id:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.requested_capabilities[0].api_integration_preference.partner_id">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">requested_capabilities[0].api_integration_preference.rest_api_integration</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.integration_method:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.requested_capabilities[0].api_integration_preference.rest_api_integration.integration_method">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.integration_type:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.requested_capabilities[0].api_integration_preference.rest_api_integration.integration_type">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">requested_capabilities[0].api_integration_preference.rest_third_party_details</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.partner_client_id:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.requested_capabilities[0].api_integration_preference.rest_third_party_details.partner_client_id">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">.....rest_third_party_details.feature_list</h4>
+	                    <div ng-repeat="feature in model.sellerReferralRequest.requested_capabilities[0].api_integration_preference.rest_third_party_details.feature_list">
+	                    	<div class="inline fields">
+		                        <div class="sixteen wide field">
+		                            <label>[[$index]]</label>
+		                            <input type="text" ng-model="model.sellerReferralRequest.requested_capabilities[0].api_integration_preference.rest_third_party_details.feature_list[$index]">
+		                        </div>
+		                    </div>
+	                    </div>
+	                    <h4 class="ui dividing header">web_experience_preference</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.partner_logo_url:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.web_experience_preference.partner_logo_url">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.return_url:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.web_experience_preference.return_url">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.action_renewal_url:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.web_experience_preference.action_renewal_url">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">collected_consents[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.collected_consents[0].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.granted:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.collected_consents[0].granted">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">products</h4>
+	                    <div class="inline fields">
+	                        <div ng-repeat="products in model.sellerReferralRequest.products" class="sixteen wide field">
+	                            <label>[[$index]]</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.products[$index]">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>customer_type:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.customer_type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>preferred_language_code:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.preferred_language_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>primary_currency_code:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.primary_currency_code">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.financial_instrument_data.bank_details[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.nick_name:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.financial_instrument_data.bank_details[0].nick_name">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.account_number:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.financial_instrument_data.bank_details[0].account_number">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.account_type:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.financial_instrument_data.bank_details[0].account_type" ng-change="model.updateAmountObject()">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.currency_code:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.financial_instrument_data.bank_details[0].currency_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.identifiers[0].type:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.financial_instrument_data.bank_details[0].identifiers[0].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.identifiers[0].value:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.financial_instrument_data.bank_details[0].identifiers[0].value">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.partner_specific_identifiers[0]</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.type:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.partner_specific_identifiers[0].type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.value:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.partner_specific_identifiers[0].value">
+	                        </div>
+	                    </div>
+	                    <h4 class="ui dividing header">customer_data.person_details</h4>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.email_address:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.person_details.email_address">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.date_of_birth.event_type:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.person_details.date_of_birth.event_type">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.date_of_birth.event_date:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.person_details.date_of_birth.event_date">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>.nationality_country_code:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.person_details.nationality_country_code">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>name.given_name:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.person_details.name.given_name">
+	                        </div>
+	                    </div>
+	                    <div class="inline fields">
+	                        <div class="sixteen wide field">
+	                            <label>name.surname:</label>
+	                            <input type="text" ng-model="model.sellerReferralRequest.customer_data.person_details.name.surname">
+	                        </div>
+	                    </div>
+	                </div>
+            	</div>
+            </div>
+            <div id="sellerReferralRequestObject" class="column">
+                <center><h3>Referral Request Object</h3></center>
+                <button id="createReferralButton" class="fluid ui primary button" ng-click="model.createSellerReferral()">Create Referral</button>
+                <div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+                	<pre>
+                    	[[model.sellerReferralRequest | json]]
+                    </pre>
+                </div>
+            </div>
+            <div id="referralResponse" class="column" style="display: none;">
+                <center><h3>Referral Response Object</h3></center>
+                <a id="createPayPalAccountButton" style="display: none;" href="[[model.referralResponse.links[1].href]]" class="fluid ui primary button">Create PayPal Account</a>
+                <div id="referralResponseJson" style="display: none; margin-top: 20px;">
+                	<div class="ui segment" style="overflow: scroll;">
+	                    <pre>
+	                        [[model.referralResponse | json]]
+	                    </pre>
+                	</div>
+                </div>
+                <div id="referralResponseLoading" style="display: none;">
+                    <segment-loader></segment-loader>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

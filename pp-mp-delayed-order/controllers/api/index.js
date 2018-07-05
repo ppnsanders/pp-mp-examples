@@ -54,7 +54,7 @@ module.exports = (router) => {
                     "Content-Type": "application/json",
                     "Accept-Language": "en_US",
                     "Authorization": "Bearer " + credentials.access_token,
-                    "PayPal-Partner-Attribution-Id": paypalConfig.attributionId
+                    "PayPal-Partner-Attribution-Id": paypalConfig.attributionId,
                   },
                   body: req.body,
                   json: true
@@ -152,9 +152,7 @@ function getAccessToken(partner, callback) {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept-Language": "en_US"
         },
-        "form": {
-            "grant_type": "client_credentials"
-        }
+        "form": "grant_type=client_credentials"
     }
     request(reqObj, (err, response, body) => {
         if(err) {

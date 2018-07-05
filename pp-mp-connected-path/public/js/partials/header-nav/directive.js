@@ -9,6 +9,10 @@ angular.module('ppMpConnectedPath').directive('headerNav', [ () => {
 							{
 								url: "/",
 								text: "Home"
+							},
+							{
+								url: "/casual-seller",
+								text: "Casual Seller"
 							}
 						]
 		}],

@@ -27,7 +27,7 @@
         </div>
 
         <!-- Angular Pages -->
-        <script src="/js/pages/home-page/directive.js"></script>
+        <script src="/js/pages/casual-seller/directive.js"></script>
         <script src="/js/pages/referral-page/directive.js"></script>
         <script src="/js/pages/referral-return/directive.js"></script>
 
