@@ -28,10 +28,14 @@
 
         <!-- Angular Pages -->
         <script src="/js/pages/casual-seller/directive.js"></script>
+        <script src="/js/pages/ba-onboarding/directive.js"></script>
+        <script src="/js/pages/ba-return/directive.js"></script>
         <script src="/js/pages/referral-page/directive.js"></script>
         <script src="/js/pages/referral-return/directive.js"></script>
 
         <!-- Angular Services -->
+        <script src="/js/pages/ba-onboarding/api.service.js"></script>
+        <script src="/js/pages/ba-return/api.service.js"></script>
         <script src="/js/pages/referral-page/api.service.js"></script>
         <script src="/js/pages/referral-return/api.service.js"></script>
 

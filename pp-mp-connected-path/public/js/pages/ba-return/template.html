@@ -1,0 +1,54 @@
+<div id="referralView">
+    <div class="ui grid">
+        <div class="two column row">
+            <div class="column" id="returnParams">
+            	<div class="ui segment">
+	            	<center><h3>Query Params</h3></center>
+	            	<button id="executeBAButton" class="fluid ui primary button" ng-click="model.executeBillingAgreement()">Execute Billing Agreement</button>
+	            	<div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+		            	<pre>
+							[[model.params | json]]
+						</pre>
+					</div>
+				</div>
+            </div>
+            <div class="column" id="executeBAResponseObject" style="display: none;">
+            	<div class="ui segment">
+	            	<center><h3>Billing Agreement Response</h3></center>
+	            	<button id="getMerchantAccountStatusButton" class="fluid ui primary button" ng-click="model.getMerchantAccountStatus()">Get Merchant Account Status</button>
+	            	<div id="executeBAResponseJson" style="display: none;">
+	            		<div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+		            		<pre>
+		            			[[model.executeBAResponse | json]]
+		            		</pre>
+		            	</div>
+	            	</div>
+	            	<div id="executeBAResponseLoading" style="display: none;">
+	            		<segment-loader></segment-loader>
+	            	</div>
+	            </div>
+            </div>
+            <div class="column" id="merchantStatusResponseObject" style="display: none;">
+            	<div class="ui segment">
+	            	<center><h3>Merchant Status Response</h3></center>
+	            	<button id="saveAsDefaultMerchantButton" class="fluid ui primary button" ng-click="model.saveAsDefaultMerchant()">Save as Default Merchant</button>
+	            	<div id="savedAsDefaultMessage" class="ui positive message" style="display: none;">
+					  	<div class="header">
+					    	This merchant has been saved as your default merchant. <span style="float: right;"><i class="green check circle icon"></i></span>
+					  	</div>
+					</div>
+	            	<div id="merchantStatusResponseJson" style="display: none;">
+	            		<div class="ui segment" style="overflow: scroll; margin-top: 20px;">
+		            		<pre>
+		            			[[model.merchantStatusResponse | json]]
+		            		</pre>
+		            	</div>
+	            	</div>
+	            	<div id="merchantStatusResponseLoading" style="display: none;">
+	            		<segment-loader></segment-loader>
+	            	</div>
+	            </div>
+            </div>
+        </div>
+    </div>
+</div>    

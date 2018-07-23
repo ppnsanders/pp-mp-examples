@@ -13,6 +13,10 @@ angular.module('ppMpConnectedPath').directive('headerNav', [ () => {
 							{
 								url: "/casual-seller",
 								text: "Casual Seller"
+							},
+							{
+								url: "/ba-onboarding",
+								text: "Billing Agreement Onboarding"
 							}
 						]
 		}],
