@@ -19,7 +19,8 @@
         "growl": "^1.10.5",
         "kraken-js": "^2.0.0",
         "makara": "^2.0.3",
-        "request": "^2.85.0"
+        "request": "^2.85.0",
+        "superagent": "^3.8.3"
     },
     "devDependencies": {
         "grunt": "^0.4.5",
