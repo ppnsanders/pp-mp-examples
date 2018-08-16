@@ -19,6 +19,7 @@
         "faker": "^4.1.0",
         "growl": "^1.10.5",
         "kraken-js": "^2.0.0",
+        "lodash": "^4.17.10",
         "makara": "^2.0.3",
         "node-growl": "^0.1.1",
         "request": "^2.85.0",
