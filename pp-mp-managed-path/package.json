@@ -14,6 +14,7 @@
         "construx-copier": "^1.0.0",
         "construx-dustjs": "^1.1.0",
         "construx-less": "^1.0.0",
+        "cryptiles": "^4.1.2",
         "eslint": "^1.10.3",
         "express": "^4.12.2",
         "faker": "^4.1.0",
@@ -21,6 +22,7 @@
         "kraken-js": "^2.0.0",
         "lodash": "^4.17.10",
         "makara": "^2.0.3",
+        "randomatic": "^3.1.0",
         "request": "^2.85.0",
         "superagent": "^3.8.3"
     },
